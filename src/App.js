@@ -1,9 +1,11 @@
 import React from "react";
+import SearchBar from './component/SearchBar'
+
 
 function App() {
   return (
     <div>
-      Hello
+            <SearchBar />
     </div>
   );
 }
