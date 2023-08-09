@@ -1,20 +1,12 @@
 import React from "react";
-<<<<<<< HEAD
-import SearchBar from './component/SearchBar'
-
-=======
+import SearchBar from "./component/SearchBar";
 import CardList from "./components/CardList";
->>>>>>> upstream/lee
-
 function App() {
+  return <div>안녕하세요</div>;
   return (
     <div>
-<<<<<<< HEAD
-            <SearchBar />
-=======
-      Hello
+      <SearchBar />
       <CardList />
->>>>>>> upstream/lee
     </div>
   );
 }
