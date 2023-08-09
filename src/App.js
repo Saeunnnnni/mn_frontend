@@ -1,13 +1,17 @@
-import React from "react";
-import CardList from "./component/CardList/CardList";
-import SearchBar from "./component/SearchBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
-    <div>
-      <SearchBar />
-      <CardList />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
