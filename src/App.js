@@ -7,7 +7,7 @@ function App() {
     <div>
       <SearchBar />
       <CardList />
-      안녕 나는 깃 테스트 중이야
+      안녕 나는 app.js테스트 중이야
     </div>
   );
 }
