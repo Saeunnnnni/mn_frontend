@@ -1,0 +1,18 @@
+.category-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.images-category img{
+    width:80px;
+    height: 80px;
+    margin: 0 70px 25px;
+}
+.images-category{
+    text-align: center;
+}
+.images-category p{
+    font-size: 25px;
+    font-weight: bold;
+}
