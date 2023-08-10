@@ -50,86 +50,92 @@
       "main_image_url": "http://localhost:3000/images/recipe02.jpg"
     }
   ],
-"recipe-board-category":[
+ 
+  "categories":{
+    "recipeBoardCategory":[
     
-    {
-      "name": "반려견", 
-      "img_url": "http://localhost:3000/images/animal01.png" ,
-      "link" : "/category/dog" 
-    },
+        {
+          "name": "반려견", 
+          "img_url": "http://localhost:3000/images/animal01.png" ,
+          "link" : "/category/dog" 
+        },
+    
+        { 
+         "name": "반려묘", 
+         "img_url": "http://localhost:3000/images/animal02.png", 
+         "link": "/category/cat"  
+        },
+        { 
+         "name": "반려햄",
+         "img_url": "http://localhost:3000/images/animal04.png" , 
+         "link": "/category/ham"  
+        },
+        { 
+         "name": "반려조", 
+         "img_url": "http://localhost:3000/images/animal03.png", 
+         "link": "/category/bird"  
+        },
+        {
+         "name": "기타", 
+         "img_url": "http://localhost:3000/images/animal05.png", 
+         "link": "/category/etc"  
+        }
+    ],
+    
+    "chefBoardCategory":[
+        
+        {
+            "name": "멍냥쉐프 1",
+            "img_url": "http://localhost:3000/images/animal01.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 2",
+            "img_url": "http://localhost:3000/images/animal02.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 3",
+            "img_url": "http://localhost:3000/images/animal03.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 4",
+            "img_url": "http://localhost:3000/images/animal04.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 5",
+            "img_url": "http://localhost:3000/images/animal05.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 6",
+            "img_url": "http://localhost:3000/images/animal06.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 7",
+            "img_url": "http://localhost:3000/images/animal07.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 8",
+            "img_url": "http://localhost:3000/images/animal08.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 9",
+            "img_url": "http://localhost:3000/images/animal09.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 10",
+            "img_url": "http://localhost:3000/images/animal10.png",
+            "link": "/category/cat"
+          }
+    ]
 
-    { 
-     "name": "반려묘", 
-     "img_url": "http://localhost:3000/images/animal02.png", 
-     "link": "/category/cat"  
-    },
-    { 
-     "name": "반려햄",
-     "img_url": "http://localhost:3000/images/animal04.png" , 
-     "link": "/category/ham"  
-    },
-    { 
-     "name": "반려조", 
-     "img_url": "http://localhost:3000/images/animal03.png", 
-     "link": "/category/bird"  
-    },
-    {
-     "name": "기타", 
-     "img_url": "http://localhost:3000/images/animal05.png", 
-     "link": "/category/etc"  
-    }
-],
-"chef-board-category":[
-    
-    {
-        "name": "멍냥쉐프 1",
-        "img_url": "http://localhost:3000/images/animal01.png",
-        "link": "/category/dog"
-      },
-      {
-        "name": "멍냥쉐프 2",
-        "img_url": "http://localhost:3000/images/animal02.png",
-        "link": "/category/cat"
-      },
-      {
-        "name": "멍냥쉐프 3",
-        "img_url": "http://localhost:3000/images/animal03.png",
-        "link": "/category/dog"
-      },
-      {
-        "name": "멍냥쉐프 4",
-        "img_url": "http://localhost:3000/images/animal04.png",
-        "link": "/category/cat"
-      },
-      {
-        "name": "멍냥쉐프 5",
-        "img_url": "http://localhost:3000/images/animal05.png",
-        "link": "/category/dog"
-      },
-      {
-        "name": "멍냥쉐프 6",
-        "img_url": "http://localhost:3000/images/animal06.png",
-        "link": "/category/cat"
-      },
-      {
-        "name": "멍냥쉐프 7",
-        "img_url": "http://localhost:3000/images/animal07.png",
-        "link": "/category/dog"
-      },
-      {
-        "name": "멍냥쉐프 8",
-        "img_url": "http://localhost:3000/images/animal08.png",
-        "link": "/category/cat"
-      },
-      {
-        "name": "멍냥쉐프 9",
-        "img_url": "http://localhost:3000/images/animal09.png",
-        "link": "/category/dog"
-      },
-      {
-        "name": "멍냥쉐프 10",
-        "img_url": "http://localhost:3000/images/animal10.png",
-        "link": "/category/cat"
-      }
-]
+  }
+
 }
