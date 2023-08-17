@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Login.css"; // 기존 스타일 파일 임포트
 import axios from "axios";
 
 const Login = () => {
-  const [userEmail, setUserEmail] = useState("");
+  const [email, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -26,7 +27,7 @@ const Login = () => {
   };
 
   const handleLogin = async () => {
-    if (!emailCheck(userEmail)) {
+    if (!emailCheck(email)) {
       setEmailError("올바른 이메일 형식이 아닙니다.");
       return;
     }
@@ -39,7 +40,7 @@ const Login = () => {
     try {
       // 실제 로그인 요청 처리 (axios를 사용하여 백엔드 API 호출)
       const response = await axios.post("http://localhost:9999/login", {
-        userEmail: userEmail,
+        userEmail: email,
         userPwd: password,
       });
 
@@ -69,39 +70,32 @@ const Login = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        height: "100vh",
-      }}
-    >
-      <form style={{ display: "flex", flexDirection: "column" }}>
+    <div className="login-container">
+      <form className="login-form">
         <img
           src="images/mnLogo01_login.png"
           alt="mnLogo01"
-          style={{ width: "200px", marginBottom: "20px" }}
+          className="login-logo"
         />
         <input
           type="text"
-          placeholder="사용자명"
-          value={userEmail}
+          placeholder="이메일"
+          value={email}
           onChange={handleEmailChange}
         />
-        {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+        {emailError && <p className="error-message">{emailError}</p>}
         <input
           type="password"
           placeholder="비밀번호"
           value={password}
           onChange={handlePasswordChange}
         />
-        {passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
-        <button onClick={handleLogin}>로그인</button>
-        <div style={{ marginTop: "10px" }}>
-          <Link to="/emailCertification">비밀번호 재설정</Link>
+        {passwordError && <p className="error-message">{passwordError}</p>}
+        <button className="login-button" onClick={handleLogin}>
+          로그인
+        </button>
+        <div className="login-links">
+          <Link to="/ResetPwd">비밀번호 재설정</Link>
           <Link to="/Signup">회원가입하기</Link>
         </div>
       </form>
