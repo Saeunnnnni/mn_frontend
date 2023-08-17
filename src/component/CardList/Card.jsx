@@ -12,7 +12,7 @@ const Card = ({ recipe,  showTitle}) => {
     const [likes, setLikes] = useState(recipe.likes);    
 
     const handleLike = () => {
-        axios.post('http://localhost:5000/recipe', { cardId: recipe.num })
+        axios.post('http://localhost:5000/recipe', { cardId: recipe.num, isLiked: !isLiked })
             .then(response => {
                 const updatedLikes = response.data.updatedLikes;
                 setLikes(updatedLikes);

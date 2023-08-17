@@ -8,7 +8,7 @@
       "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
       "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe01.jpg",
-      "likes": 0
+      "likes": 10
     },
     {
       "num": 2,
@@ -19,7 +19,7 @@
       "ingredients": ["사과", "오트밀", "요거트"],
       "description": "맛있고 건강한 사과 시리얼 스낵 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe02.jpg",
-      "likes": 0
+      "likes": 20
     },
     {
       "num": 3,
@@ -30,7 +30,7 @@
       "ingredients": ["고구마", "계란", "현미 가루", "오메가 3 보충제"],
       "description": "고구마를 활용한 건강한 간식인 고구마 쿠키 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe03.jpg",
-      "likes": 0
+      "likes": 30
     },
     {
       "num": 4,
