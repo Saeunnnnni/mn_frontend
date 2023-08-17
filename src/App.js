@@ -1,13 +1,14 @@
 import React from "react";
-import SearchBar from './component/SearchBar'
-import CardList from "./components/CardList";
+import RecipeDetail from "./pages/Recipe/RecipeDetail";
+import PartyDetail from "./pages/Party/PartyDetail";
+import NoticeDetail from "./pages/Notice/NoticeDetail";
 
 function App() {
   return (
     <div>
-      <SearchBar />
-      Hello
-      <CardList />
+      <RecipeDetail />
+      <PartyDetail />
+      <NoticeDetail />
     </div>
   );
 }

@@ -1,0 +1,118 @@
+{
+    "recipes": [{
+        "category": "반려견",
+        "title": "사과와 당근 트릿",
+        "number": 1,
+        "level": "쉬움",
+        "time": 20,
+        "ingredients": {
+            "apple": "1개",
+            "carrot": "1개",
+            "honey": "1작은술"
+        },
+        "description": "사과와 당근을 잘게 다진 후 꿀과 함께 섞어준다. 트레이에 얹어 150도로 예열된 오븐에서 15분 동안 구워준다."
+    }, {
+        "category": "반려견",
+        "title": "쌀과 야채 파이",
+        "number": 1,
+        "level": "중",
+        "time": 30,
+        "ingredients": {
+            "rice": "1컵",
+            "vegetable": "1/2컵",
+            "egg": "1개"
+        },
+        "description": "채소를 살짝 데쳐서 잘게 다진 후, 밥과 계란을 추가해 잘 섞는다. 소량으로 나눠 오븐팬에 분배하고 180도로 예열된 오븐에서 20분간 구워준다."
+    }, {
+        "category": "반려견",
+        "title": "닭고기 볶음",
+        "number": 1,
+        "level": "중",
+        "time": 15,
+        "ingredients": {
+            "chickenBreast": "100g",
+            "carrot": "50g",
+            "spinach": "50g",
+            "oliveOil": "1큰술"
+        },
+        "description": "닭가슴살, 당근, 시금치를 적당한 크기로 잘라서 올리브오일로 볶아준다. 완전히 식힌 후에 반려견에게 제공한다."
+    }, {
+        "category": "반려견",
+        "title": "반려견용 미트볼",
+        "number": 1,
+        "level": "중",
+        "time": 20,
+        "ingredients": {
+            "mincedBeef": "100g",
+            "kidneyBean": "50g",
+            "egg": "1개",
+            "starch": "1작은술"
+        },
+        "description": "모든 재료를 잘 섞은 뒤, 작은 미트볼 모양으로 만든다. 180도로 예열된 오븐에서 15분간 구워준다."
+    }, {
+        "category": "반려견",
+        "title": "밀가루 빵",
+        "number": 1,
+        "level": "중",
+        "time": 30,
+        "ingredients": {
+            "flour": "1컵",
+            "egg": "1개",
+            "peanutButter": "1큰술"
+        },
+        "description": "모든 재료를 섞어 반죽을 만든다. 작은 덩어리로 나누어 구워준다. 180도로 예열된 오븐에서 20분간 구워준다."
+    }, {
+        "category": "반려견",
+        "title": "쌀과 당근 쿠키",
+        "number": 1,
+        "level": "중",
+        "time": 30,
+        "ingredients": {
+            "rice": "1컵",
+            "carrot": "1개",
+            "flour": "1/2컵",
+            "egg": "1개"
+        },
+        "description": "당근을 잘게 다진 후 모든 재료와 함께 섞어 반죽을 만든다. 쿠키 모양으로 만들어 180도로 예열된 오븐에서 20분간 구워준다."
+    }, {
+        "category": "반려견",
+        "title": "",
+        "number": 1,
+        "level": "",
+        "time": ,
+        "ingredients": {
+            
+        },
+        "description": ""
+    }, {
+        "category": "반려견",
+        "title": "",
+        "number": 1,
+        "level": "",
+        "time": ,
+        "ingredients": {
+            
+        },
+        "description": ""
+    }, {
+        "category": "반려견",
+        "title": "",
+        "number": 1,
+        "level": "",
+        "time": ,
+        "ingredients": {
+            
+        },
+        "description": ""
+    }, {
+        "category": "반려견",
+        "title": "",
+        "number": 1,
+        "level": "",
+        "time": ,
+        "ingredients": {
+            
+        },
+        "description": ""
+    }]
+}
