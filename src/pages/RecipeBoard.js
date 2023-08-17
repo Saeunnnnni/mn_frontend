@@ -7,6 +7,8 @@ import axios from 'axios';
 import Slider from 'react-slick'; //슬라이더 라이브러리
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Headers from '../component/Layout/Header/Header';
+import Footer from '../component/Layout/Footer/Footer'
 
 
 
@@ -68,7 +70,9 @@ function PrevArrow(props) {
 
 
     
-    return (
+  return (
+    <div>
+      <Headers/>
         <div className='container'>
            <div className='RecipeBoard-mainImg'>
             <MainImg/>
@@ -105,7 +109,9 @@ function PrevArrow(props) {
         
             {/* 오늘의 레시피 추천 리스트 */}
             <CardList cards={cards.slice(4, 8)} showTitle={false}/>
-    </div>
+      </div>
+      <Footer/>
+      </div>
     );
 };
 
