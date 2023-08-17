@@ -1,14 +1,16 @@
-import React from "react";
-import SearchBar from './component/SearchBar'
-import CardList from "./components/CardList";
+import React from 'react';
+import { BrowserRouter } from "react-router-dom";
+import MainPage from './pages/MainPage/MainPage.js';
+import Header from './component/Layout/Header/Header.js';
+import Footer from './component/Layout/Footer/Footer.js';
 
 function App() {
   return (
-    <div>
-      <SearchBar />
-      Hello
-      <CardList />
-    </div>
+    <BrowserRouter>
+      <Header/>
+      <MainPage/>
+      <Footer/>
+    </BrowserRouter>
   );
 }
 
