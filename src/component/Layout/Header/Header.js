@@ -18,7 +18,7 @@ function Header() {
     };
 
     return (
-        <div className="container">   
+        <div className="header-container">   
             <div className="header">
                 <div className="header-left">
                     <img className="logo" src={`${publicPath}/images/mnLogo02.png`} alt="logo" />
@@ -28,13 +28,13 @@ function Header() {
                                 <Link to="/">홈</Link>
                             </li>
                             <li>
-                                <Link to="/">공지</Link>
+                                <Link to="/notice">공지</Link>
                             </li>
                             <li>
-                                <Link to="/">게시판</Link>
+                                <Link to="/recipe">게시판</Link>
                             </li>
                             <li>
-                                <Link to="/">축하파티</Link>
+                                <Link to="/party">축하파티</Link>
                             </li>
                         </ul>
                     </nav>
@@ -44,10 +44,10 @@ function Header() {
                     <nav className="sub-nav">
                         <ul>
                             <li>
-                                <Link to="/">로그인</Link>
+                                <Link to="/login">로그인</Link>
                             </li>
                             <li>
-                                <Link to="/">회원가입</Link>
+                                <Link to="/signup">회원가입</Link>
                             </li>
                         </ul>
                     </nav>

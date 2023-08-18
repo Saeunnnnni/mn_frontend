@@ -1,17 +1,17 @@
 .footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 100px;
+}
+
+.footer-container {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: column;
     border-top: 1px solid lightgray;
     background-color: #eeeeee;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    gap: 100px;
 }
 
 .left > h3 {
