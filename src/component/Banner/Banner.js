@@ -3,38 +3,26 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const NextArrow = (props) => {
-    const { className, style, onClick } = props;
-
-    return (
-      <div
-        className={className}
-        style={{ 
-            ...style,
-            display: "block", 
-            background: "red", 
-            right: "10px"
-        }}
-        onClick={onClick}
-      />
-    );
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", filter: "opacity(0.5) drop-shadow(0 0 0 #625f5f)", zoom: "2.5" }}
+      onClick={onClick}
+    />
+  );
 }
 
-const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
-
-    return (
-        <div
-        className={className}
-        style={{ 
-            ...style, 
-            display: "block", 
-            background: "green", 
-            left: "10px"
-        }}
-        onClick={onClick}
-        />
-    );
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", filter: "opacity(0.5) drop-shadow(0 0 0 #625f5f)", zoom: "2.5"}}
+      onClick={onClick}
+    />
+  );
 }
 
 function Banner() {

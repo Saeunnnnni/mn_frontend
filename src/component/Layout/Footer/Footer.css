@@ -1,4 +1,5 @@
-.footer-container  {
+.footer-container {
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,12 +8,14 @@
     background-color: #eeeeee;
 }
 
+
 .footer{
     display: flex;
     justify-content: center;
     padding: 20px 0;
     gap: 100px;
 }
+
 
 .left > h3 {
   font-size: 16px;
