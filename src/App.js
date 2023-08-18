@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from './pages/MainPage/MainPage.js';
 import Header from './component/Layout/Header/Header.js';
 import Footer from './component/Layout/Footer/Footer.js';
+import RecipeBoard from './pages/RecipeBoard.js';
+import RecipeDetail from './pages/Recipe/RecipeDetail.js'
 import Notice from './pages/Notice/NoticeDetail.js'
 import Recipe from './pages/RecipeBoard.js'
 import Party from './pages/Party/PartyDetail.js'
@@ -22,7 +24,8 @@ function App() {
         <Route path="/party" element={<Party/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/resetPwd" element={<ResetPwd/>}/>
-        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/recipeDetail" element={<RecipeDetail/>}/>
         <Route path="/mypage" element={<MyPage/>}/>
       </Routes>
       <Footer/>

@@ -97,7 +97,8 @@ function Footer(){
                 </div>
             </div>
             <p className="copy">© {year}. Front-end Components All rights reserved.</p>
-        </div>
+            </div>
+           
     )    
 }
 

@@ -18,6 +18,7 @@ function Header() {
     };
 
     return (
+
         <div className="header-container">   
             <div className="header">
                 <div className="header-left">
@@ -67,7 +68,8 @@ function Header() {
                     </form>
                 </div>
             </div>
-        </div>
+            </div>
+        
     );
 }
 
