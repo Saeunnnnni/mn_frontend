@@ -4,8 +4,6 @@ import ImageCategory from '../component/ImageCategory/ImageCategory';
 import CardList from '../component/CardList/CardList';
 import MainImg from '../component/MainImg/MainImg';
 import axios from 'axios';
-import Header from '../component/Layout/Header/Header';
-import Footer from '../component/Layout/Footer/Footer';
 import SlickSlider from '../lib/slickSlide'; 
 import { Arrow } from '../lib/arrow'; 
 
@@ -56,7 +54,7 @@ import { Arrow } from '../lib/arrow';
     
   return (
     <div>
-      <Header/>
+     
         <div className='container'>
            <div className='RecipeBoard-mainImg'>
             <MainImg/>
@@ -66,7 +64,7 @@ import { Arrow } from '../lib/arrow';
         
             <ImageCategory categories={categories.recipeBoardCategory} />
             
-            <p style={titleStyle} className='board-title'>화제의 TOP 레시피</p>
+            <p className='board-title'>화제의 TOP 레시피</p>
             
             {/* TOP 10 카드 리스트 */}
           {/* <SlickSlider items={cards.map((card, index) => (
@@ -75,7 +73,7 @@ import { Arrow } from '../lib/arrow';
  
          */}
         
-        <p style={titleStyle} className='board-title'>쉐프 소개</p>
+        <p  className='board-title'>쉐프 소개</p>
             {/* chef list  + slider 적용 */}
             <SlickSlider items={categories.chefBoardCategory.map((category, index) => (
               <ImageCategory key={index} categories={[category]} />
@@ -84,25 +82,20 @@ import { Arrow } from '../lib/arrow';
           
 
 
-            <p style={titleStyle} className='board-title'>이런 레시피를 찾고 있나요?</p>
+            <p className='board-title'>이런 레시피를 찾고 있나요?</p>
             <p style={title2Style} className='board-title'>좋아하실만한 레시피를 추천드려요!</p>
             
         
             {/* 오늘의 레시피 추천 리스트 */}
             <CardList cards={cards.slice(4, 8)} showTitle={false}/>
       </div>
-      <Footer/>
+     
       </div>
     );
 };
 
 
 //스타일 변수
-const titleStyle = {
-    fontSize:'28px',
-    margin:'30px 0 15px 0',
-    fontWeight:'bold'
-};
 
 
 const title2Style = {

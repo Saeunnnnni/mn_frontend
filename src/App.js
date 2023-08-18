@@ -16,7 +16,6 @@ import MyPage from './pages/Mypage/Mypage.js'
 function App() {
   return (
     <BrowserRouter>
-      <RecipeBoard/>
       <Header/>
       <Routes>
         <Route path="/" element={<MainPage/>}/>
@@ -26,7 +25,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/resetPwd" element={<ResetPwd/>}/>
         <Route path="/signup" element={<Signup />} />
-        <Routh path="/recipeDetail" element={<RecipeDetail/>}/>
+        <Route path="/recipeDetail" element={<RecipeDetail/>}/>
         <Route path="/mypage" element={<MyPage/>}/>
       </Routes>
       <Footer/>
