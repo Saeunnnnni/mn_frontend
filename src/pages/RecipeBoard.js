@@ -2,119 +2,63 @@ import React, { useState,useEffect } from 'react';
 import SearchBar from '../component/SearchBar/SearchBar';
 import ImageCategory from '../component/ImageCategory/ImageCategory';
 import CardList from '../component/CardList/CardList';
-<<<<<<< HEAD
-import axios from 'axios';
-
-
-const categoriesUrl="http://localhost:5000/categories"
- 
-
-function RecipeBoard(){
-
-    const [categories, setCategories] = useState({ recipeBoardCategory: [], chefBoardCategory: [] });
-
-
-    useEffect(() => { 
-    axios.get(categoriesUrl)
-        .then((Response) => {
-            console.log(Response.data)
-            setCategories(Response.data)
-            //console.log(Response.data)
-        })
-        .catch((error) => {
-
-        });
-
-
-    },[])
-=======
 import MainImg from '../component/MainImg/MainImg';
 import axios from 'axios';
-import Slider from 'react-slick'; //슬라이더 라이브러리
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
+import Header from '../component/Layout/Header/Header';
+import Footer from '../component/Layout/Footer/Footer';
+import SlickSlider from '../lib/slickSlide'; 
+import { Arrow } from '../lib/arrow'; 
 
 
  /*json이 저장된 주소를 불러와서 변수에 담기 */
-const categoriesUrl="http://localhost:5000/categories"
- 
+  const categoriesUrl="http://localhost:5000/categories"
+  
 
-const RecipeBoard = () => {
+  const RecipeBoard = () => {
     const [cards, setCards] = useState([]);
-  /*게시판 카테고리 목록을 저장하고 각각의 배열에 담기게 초기값 설정 */
-    const [categories, setCategories] = useState({ recipeBoardCategory: [], chefBoardCategory: [] });
+    console.log(cards)
+    console.log(CardList)
 
-/*각각 목록을 axios로 불러오기 */
-useEffect(() => { 
-axios.get(categoriesUrl)
-    .then((Response) => {
-        setCategories(Response.data)
-        //console.log(Response.data)
-    })
-    .catch((error) => {        
-    });    
-}, [])
+    /*게시판 카테고리 목록을 저장하고 각각의 배열에 담기게 초기값 설정 */
+      const [categories, setCategories] = useState({ recipeBoardCategory: [], chefBoardCategory: [] });
+
+  /*각각 카테고리목록을 axios로 불러오기 */
+  useEffect(() => { 
+  axios.get(categoriesUrl)
+      .then((Response) => {
+          setCategories(Response.data)
+          //console.log(Response.data)
+      })
+      .catch((error) => {        
+      });    
+  }, [])
     
-/* 슬라이더 사용을 위한 코드 */    
-const [currentSlide, setCurrentSlide] = useState(0);
-/* 슬라이더 설정 코드 */
-  const settings = {
-  arrow: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 8,
-  slidesToScroll: 1,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />
-};
-
-function NextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background:"red"}}
-      onClick={onClick}
-    />
-  );
-}
-
-function PrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background:"red"}}
-      onClick={onClick}
-    />
-  );
-}
-
-
-
->>>>>>> origin/lee
     
-    return (
+  const cardSettings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />
+  };
+
+  const chefSettings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />
+  };
+
+    console.log(SlickSlider)
+    
+  return (
+    <div>
+      <Header/>
         <div className='container'>
            <div className='RecipeBoard-mainImg'>
-<<<<<<< HEAD
-                {/* json에 저장된 레시피의 순위 중 베스트 1번째의 이미지가 들어와야할 부분 */}
-                <img src="" alt="" />
-            </div>
-
-            <SearchBar />
-            <ImageCategory categories={categories.recipeBoardCategory} />
-
-            <p>화제의 TOP 레시피</p>
-            <CardList />
-
-            <ImageCategory categories={categories.chefBoardCategory} />
-        </div>
-    );
-};
-
-=======
             <MainImg/>
             </div>
                        
@@ -125,22 +69,19 @@ function PrevArrow(props) {
             <p style={titleStyle} className='board-title'>화제의 TOP 레시피</p>
             
             {/* TOP 10 카드 리스트 */}
-            <CardList cards={cards.slice(0, 4)} showTitle={true} />
-            
-           
+          {/* <SlickSlider items={cards.map((card, index) => (
+                <CardList key={index} cards={card} showTitle={true} />
+            ))} settings={cardSettings} />
+ 
+         */}
+        
+        <p style={titleStyle} className='board-title'>쉐프 소개</p>
             {/* chef list  + slider 적용 */}
-            <div style={sliderContainer} className="slider-container">
-                
-                    <Slider {...settings} initialSlide={currentSlide}>
-                    {categories.chefBoardCategory.map((category, index) => (
-                        <div key={index}>
-                        <ImageCategory categories={[category]} />
-                        </div>
-                    ))}
-                   
-                    </Slider>
-         
-            </div>
+            <SlickSlider items={categories.chefBoardCategory.map((category, index) => (
+              <ImageCategory key={index} categories={[category]} />
+            ))} settings={chefSettings} />
+                      
+          
 
 
             <p style={titleStyle} className='board-title'>이런 레시피를 찾고 있나요?</p>
@@ -149,7 +90,9 @@ function PrevArrow(props) {
         
             {/* 오늘의 레시피 추천 리스트 */}
             <CardList cards={cards.slice(4, 8)} showTitle={false}/>
-    </div>
+      </div>
+      <Footer/>
+      </div>
     );
 };
 
@@ -168,10 +111,10 @@ const title2Style = {
   fontWeight:'200'
 };
 
+const cardStyle = {
+  border:'1px solid red'
+};
 
-const sliderContainer = {
-    width: '1200px'
-}
 
->>>>>>> origin/lee
+
 export default RecipeBoard;

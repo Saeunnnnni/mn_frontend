@@ -18,6 +18,8 @@ const CardList = () => {
     }, []);
 
     return (
+
+        
         <div className="card-list">
             {cards.slice(0, 4).map((card, index) => (
                 <Card key={index} recipe={card} />

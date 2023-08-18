@@ -1,4 +1,4 @@
-.footer {
+.footer-container  {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
     background-color: #eeeeee;
 }
 
-.container {
+.footer{
     display: flex;
     justify-content: center;
     padding: 20px 0;

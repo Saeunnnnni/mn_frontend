@@ -5,9 +5,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-<<<<<<< HEAD
-  <App />
-=======
-    <App />
->>>>>>> origin/lee
+
+ <App />
+
 );

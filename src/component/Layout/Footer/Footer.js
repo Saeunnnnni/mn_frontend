@@ -5,8 +5,8 @@ function Footer(){
     const year = new Date().getFullYear();
 
     return(
-        <div className="footer">
-            <div className="container">
+        <div className="footer-container">
+            <div className="footer">
                 <div className="left">
                     <h3>(주)멍냥키친</h3>
                     <h2>4485-0850<span>평일 09:00 ~ 18:00</span></h2>
@@ -97,7 +97,8 @@ function Footer(){
                 </div>
             </div>
             <p className="copy">© {year}. Front-end Components All rights reserved.</p>
-        </div>
+            </div>
+           
     )    
 }
 

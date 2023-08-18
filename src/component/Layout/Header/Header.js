@@ -18,7 +18,8 @@ function Header() {
     };
 
     return (
-        <div className="container">   
+        <div className="header-container"> 
+            <div className="container">
             <div className="header">
                 <div className="header-left">
                     <img className="logo" src={`${publicPath}/images/mnLogo02.png`} alt="logo" />
@@ -67,7 +68,8 @@ function Header() {
                     </form>
                 </div>
             </div>
-        </div>
+            </div>
+            </div>    
     );
 }
 
