@@ -20,7 +20,7 @@ function MainPage() {
         <CardList cards={cards.slice(4, 8)} showTitle={false} />
 
         <div className='board-title'>오늘의 🎉<span style={{ color: "#ff6a10" }} >주인공 </span></div>
-
+        <CardList cards={cards.slice(4, 8)} showTitle={false} />
     </div>
   )
 }

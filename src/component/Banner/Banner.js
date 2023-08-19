@@ -37,7 +37,7 @@ function Banner() {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed:2000
+      autoplaySpeed: 3000
     };
 
 
@@ -47,21 +47,21 @@ function Banner() {
                 <div>
                     <img 
                         className="image"
-                        src={`${publicPath}/images/mainImg1.jpg`} 
+                        src={`${publicPath}/images/mainImg1.png`} 
                         alt="배너이미지1" 
                     />
                 </div>
                 <div>
                     <img 
                         className="image"
-                        src={`${publicPath}/images/mainImg2.jpg`} 
+                        src={`${publicPath}/images/mainImg2.png`} 
                         alt="배너이미지2" 
                     />
                 </div>
                 <div>
                     <img 
                         className="image"
-                        src={`${publicPath}/images/mainImg3.jpg`} 
+                        src={`${publicPath}/images/mainImg3.png`} 
                         alt="배너이미지3" 
                     />
                 </div>
