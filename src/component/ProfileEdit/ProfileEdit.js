@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import "./ProfileEdit.css";
 
@@ -56,15 +55,17 @@ const ProfileEdit = () => {
 
   return (
     <div className="profile-edit-form">
-      <form className="formStyle">
-        <div>
+      <div className="profile-edit-top">
           <h2>회원정보 수정</h2>
-          {/* 
+          
           <Link className="withDrawal" to="/withDrawal">
             탈퇴하기
           </Link>
-          */}
+         
         </div>
+      <form className="formStyle">
+        
+        <div className="profile-edit-input">
         <label>이메일</label>
         <input
           className="box"
@@ -72,7 +73,8 @@ const ProfileEdit = () => {
           value={email}
           onChange={handleEmailChange}
         />
-        <br />
+        </div>
+        <div className="profile-edit-input">
         <label>별명</label>
         <input
           className="box"
@@ -80,7 +82,8 @@ const ProfileEdit = () => {
           value={nickname}
           onChange={handleNicknameChange}
         />
-        <br />
+        </div>
+        <div className="profile-gender-input">
         <label>성별</label>
         <label className="radio-man">
           <input
@@ -100,7 +103,8 @@ const ProfileEdit = () => {
           />
           여자
         </label>
-        <br />
+        </div>
+        <div className="profile-edit-input">
         <label>생년월일</label>
         <input
           className="box"
@@ -109,14 +113,16 @@ const ProfileEdit = () => {
           value={birthdate}
           onChange={handleBirthdateChange}
         />
-        <br />
+        </div>
+        <div className="profile-edit-image">
         <label>프로필 이미지</label>
         <input
           type="file"
           accept="image/*"
           onChange={handleProfileImageChange}
         />
-        <br />
+        </div>
+        <div className="profile-edit-input">
         {profileImage && <img src={profileImage} alt="프로필 이미지" />}
         <label>한줄소개</label>
         <input
@@ -125,11 +131,13 @@ const ProfileEdit = () => {
           value={bio}
           onChange={handleBioChange}
         />
-        <br />
+        </div>
         <button onClick={handleProfileUpdate}>회원정보 수정</button>
         <button onClick={handlePasswordChange}>비밀번호 변경</button>
       </form>
+      
     </div>
+    
   );
 };
 

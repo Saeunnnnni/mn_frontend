@@ -1,31 +1,56 @@
 .profile-edit-form {
-  width: 1000px;
+  width: 850px;
   height: 700px;
   margin-top: 60px;
   margin-left: 45px;
-  margin-right: 250px;
   display: flex;
   flex-direction: column;
   text-align: left; /* 왼쪽 정렬 */
   justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
+  padding: 60px 0 50px 100px ;
   border: 1px solid #d3d3d3;
   border-radius: 15px;
 }
+.profile-edit-input{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
 
+.profile-edit-input input{
+  padding-left: 10px;
+}
+.profile-edit-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.withDrawal {
+  color:  #ff0000;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 50px;
+
+}
+
+.profile-edit-image, .profile-gender-input{
+  margin-top: 60px;
+}
+
+.profile-gender-input label{
+  margin-right: 100px !important;
+}
+.radio-man input,.radio-woman input{
+  margin-right: 10px;
+}
 .formStyle {
-  margin-top: 40px;
-  margin-left: -320px;
+  width: 530px;
 }
 
 .profile-edit-form label {
   font-size: 20px;
   margin-right: 30px;
-}
 
-.formStyle input {
-  margin-top: 60px;
 }
 
 .profile-edit-form h2 {
@@ -38,15 +63,7 @@
 }
 
 .box {
-  width: 400px;
+  width: 390px;
   height: 30px;
 }
-.withDrawal {
-  margin-left: 20px; /* 자동으로 왼쪽 여백을 최대로 늘려서 오른쪽 정렬 */
-  display: contents; /* 버튼을 블록 요소로 표시 */
-  margin-top: 10px;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 15px;
-  cursor: pointer;
-}
+

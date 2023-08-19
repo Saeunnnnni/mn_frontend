@@ -2,6 +2,7 @@ import React from "react";
 import MypageNav from "../../component/MypageNav/MypageNav";
 import Profile from "../../component/Profile/Profile";
 import ProfileEditForm from "../../component/ProfileEdit/ProfileEdit";
+import { Link } from "react-router-dom";
 import "./Mypage.css"; // 위에서 작성한 CSS 파일을 임포트하고 있다고 가정합니다.
 
 const Mypage = () => {
@@ -10,9 +11,10 @@ const Mypage = () => {
       <hr />
       <MypageNav />
       <hr />
-      <div className="mypage-content">
+      <div className="myPage-content container">
         <Profile />
-        <ProfileEditForm />
+        <ProfileEditForm  />
+
       </div>
     </div>
   );

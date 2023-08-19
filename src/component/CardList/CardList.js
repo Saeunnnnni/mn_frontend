@@ -4,32 +4,17 @@ import './CardList.css';
 import Card from './Card';
 
 
-const CardList = () => {
-    const [cards, setCards] = useState([]);
-
-    useEffect(() => {
-        axios.get('http://localhost:5000/recipe')
-            .then(response => {
-                setCards(response.data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }, []);
-
+const CardList = ({ cards }) => {   
     return (
-
-        
         <div className="card-list">
-            {cards.slice(0, 4).map((card, index) => (
-                <Card key={index} recipe={card} />
+            {cards.map((card, index) => (
+                <Card key={index} data={card} />
             ))}
         </div>
     );
 };
 
 export default CardList;
-
 
 
 
