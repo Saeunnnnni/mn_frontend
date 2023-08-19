@@ -55,6 +55,7 @@ function Header() {
                     <form onSubmit={searchSubmit}> 
                         <div className="search">
                             <input
+                                className="search-input"
                                 type="text"
                                 placeholder="통합 검색"
                                 value={keyword}

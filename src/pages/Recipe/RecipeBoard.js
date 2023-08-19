@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from 'react';
-import SearchBar from '../component/SearchBar/SearchBar';
-import ImageCategory from '../component/ImageCategory/ImageCategory';
-import CardList from '../component/CardList/CardList';
-import MainImg from '../component/MainImg/MainImg';
+import SearchBar from '../../component/SearchBar/SearchBar';
+import ImageCategory from '../../component/ImageCategory/ImageCategory';
+import CardList from '../../component/CardList/CardList';
+import MainImg from '../../component/MainImg/MainImg';
 import axios from 'axios';
-import SlickSlider from '../lib/slickSlide'; 
-import { Arrow } from '../lib/arrow'; 
+import SlickSlider from '../../lib/slickSlide'; 
+import { Arrow } from '../../lib/arrow'; 
 
 
  /*json이 저장된 주소를 불러와서 변수에 담기 */
