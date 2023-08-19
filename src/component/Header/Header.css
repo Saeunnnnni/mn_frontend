@@ -125,7 +125,7 @@
     position: absolute;
     left: 7px;
     top: 6px;
-    background-image: url("../../../../public/images/searchImage.png"); 
+    background-image: url("../../../public/images/searchImage.png"); 
     background-size: cover;
     background-repeat: no-repeat;
     background-color: transparent;
