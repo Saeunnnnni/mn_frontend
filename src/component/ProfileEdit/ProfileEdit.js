@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import "./ProfileEdit.css";
 
@@ -56,78 +55,87 @@ const ProfileEdit = () => {
 
   return (
     <div className="profile-edit-form">
+      <div className="profile-edit-top">
+        <h2>회원정보 수정</h2>
+
+        <Link className="withDrawal" to="/withDrawal">
+          탈퇴하기
+        </Link>
+      </div>
       <form className="formStyle">
-        <div>
-          <h2>회원정보 수정</h2>
-          {/* 
-          <Link className="withDrawal" to="/withDrawal">
-            탈퇴하기
-          </Link>
-          */}
+        <div className="profile-edit-input">
+          <label>이메일</label>
+          <input
+            className="box"
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+          />
         </div>
-        <label>이메일</label>
-        <input
-          className="box"
-          type="email"
-          value={email}
-          onChange={handleEmailChange}
-        />
-        <br />
-        <label>별명</label>
-        <input
-          className="box"
-          type="text"
-          value={nickname}
-          onChange={handleNicknameChange}
-        />
-        <br />
-        <label>성별</label>
-        <label className="radio-man">
+        <div className="profile-edit-input">
+          <label>별명</label>
           <input
-            type="radio"
-            value="남"
-            checked={gender === "남"}
-            onChange={handleGenderChange}
+            className="box"
+            type="text"
+            value={nickname}
+            onChange={handleNicknameChange}
           />
-          남자
-        </label>
-        <label className="radio-woman">
+        </div>
+        <div className="profile-gender-input">
+          <label>성별</label>
+          <label className="radio-man">
+            <input
+              type="radio"
+              value="남"
+              checked={gender === "남"}
+              onChange={handleGenderChange}
+            />
+            남자
+          </label>
+          <label className="radio-woman">
+            <input
+              type="radio"
+              value="여"
+              checked={gender === "여"}
+              onChange={handleGenderChange}
+            />
+            여자
+          </label>
+        </div>
+        <div className="profile-edit-input">
+          <label>생년월일</label>
           <input
-            type="radio"
-            value="여"
-            checked={gender === "여"}
-            onChange={handleGenderChange}
+            className="box"
+            type="text"
+            placeholder="YYYY-MM-DD"
+            value={birthdate}
+            onChange={handleBirthdateChange}
           />
-          여자
-        </label>
-        <br />
-        <label>생년월일</label>
-        <input
-          className="box"
-          type="text"
-          placeholder="YYYY-MM-DD"
-          value={birthdate}
-          onChange={handleBirthdateChange}
-        />
-        <br />
-        <label>프로필 이미지</label>
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleProfileImageChange}
-        />
-        <br />
-        {profileImage && <img src={profileImage} alt="프로필 이미지" />}
-        <label>한줄소개</label>
-        <input
-          className="box"
-          type="text"
-          value={bio}
-          onChange={handleBioChange}
-        />
-        <br />
-        <button onClick={handleProfileUpdate}>회원정보 수정</button>
-        <button onClick={handlePasswordChange}>비밀번호 변경</button>
+        </div>
+        <div className="profile-edit-image">
+          <label>프로필 이미지</label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleProfileImageChange}
+          />
+        </div>
+        <div className="profile-edit-input">
+          {profileImage && <img src={profileImage} alt="프로필 이미지" />}
+          <label>한줄소개</label>
+          <input
+            className="box"
+            type="text"
+            value={bio}
+            onChange={handleBioChange}
+          />
+        </div>
+        <button className="users-edit-button" onClick={handleProfileUpdate}>
+          회원정보 수정
+        </button>
+        <button className="pwd-edit-button" onClick={handlePasswordChange}>
+          비밀번호 변경
+        </button>
       </form>
     </div>
   );

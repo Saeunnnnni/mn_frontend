@@ -11,15 +11,11 @@ const Profile = () => {
       <div className="profile-info">
         <h2>안녕춘식이</h2>
         <div className="followers">
-          <span>팔로워</span> 10
-          <span>팔로잉</span> 5
+          <span>팔로워 10</span>
+          <span>팔로잉 5</span>
         </div>
-        <p className="bio">춘식이 닮은 고양이를 가진 집사</p>
         <hr />
-        <div className="likes">
-          <img src="images/Like.png" alt="Likes" />
-          <span>좋아요</span> <strong>25</strong>
-        </div>
+        <p className="bio">춘식이 닮은 고양이를 가진 집사</p>
       </div>
     </div>
   );

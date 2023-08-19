@@ -7,14 +7,15 @@
   height: 300px;
 }
 
-.resetPwd-form input {
-  width: 350px;
+.email-input {
+  width: 340px;
   height: 40px;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 8px;
   font-size: 18px;
+  padding-left: 10px;
 }
 
 .resetPwd-form p {

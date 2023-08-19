@@ -1,57 +1,171 @@
-{"recipe": [ 
+{
+  "recipe": [
     {
       "num": 1,
-      "title": "아주 쉽고 맛있는 닭가슴살 샐러드",
-      "level": "초급",
-      "time": "20분",
-      "writer": "petlover123",
-      "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
-      "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
-      "main_image_url": "http://localhost:3000/images/recipe01.jpg",
-      "likes": 50
+      "title": "닭가슴살 샐러드"
     },
     {
-      "num": 2,
-      "title": "상큼하고 달달해서 우리 강아지가 좋아하는 사과 시리얼 스낵",
-      "level": "초급",
-      "time": "15분",
-      "writer": "doggytreats",
-      "ingredients": ["사과", "오트밀", "요거트"],
-      "description": "맛있고 건강한 사과 시리얼 스낵 레시피입니다.",
-      "main_image_url": "http://localhost:3000/images/recipe02.jpg",
-      "likes": 20
+      "recipe": [
+        {
+          "num": 1,
+          "title": "아주 쉽고 맛있는 닭가슴살 샐러드",
+          "level": "초급",
+          "time": "20분",
+          "writer": "petlover123",
+          "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
+          "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
+
+          "main image url": "http://localhost:3000/images/recipe01.jpg"
+        },
+        {
+          "num": 2,
+          "title": "사과 시리얼 스낵",
+
+          "main image url": "http://localhost:3000/images/recipe01.jpg",
+          "likes": 10
+        },
+        {
+          "num": 2,
+          "title": "상큼하고 달달해서 우리 강아지가 좋아하는 사과 시리얼 스낵",
+          "level": "초급",
+          "time": "15분",
+          "writer": "doggytreats",
+          "ingredients": ["사과", "오트밀", "요거트"],
+          "description": "맛있고 건강한 사과 시리얼 스낵 레시피입니다.",
+
+          "main image url": "http://localhost:3000/images/recipe02.jpg",
+
+          "main image url": "http://localhost:3000/images/recipe02.jpg",
+          "likes": 20
+        },
+        {
+          "num": 3,
+          "title": "고구마 쿠키",
+          "level": "중급",
+          "time": "30분",
+          "writer": "pawsandbites",
+          "ingredients": ["고구마", "계란", "현미 가루", "오메가 3 보충제"],
+          "description": "고구마를 활용한 건강한 간식인 고구마 쿠키 레시피입니다.",
+
+          "main image url": "http://localhost:3000/images/recipe03.jpg",
+
+          "main image url": "http://localhost:3000/images/recipe03.jpg",
+          "likes": 30
+        },
+        {
+          "num": 4,
+          "title": "양고기 스튜",
+          "level": "중급",
+          "time": "40분",
+          "writer": "petfoodie",
+          "ingredients": ["양고기", "감자", "당근", "녹차"],
+          "description": "풍미 넘치는 양고기 스튜 레시피로 반려견을 맛있게 먹여주세요.",
+
+          "main image url": "http://localhost:3000/images/recipe04.jpg",
+
+          "main image url": "http://localhost:3000/images/recipe04.jpg",
+          "likes": 0
+        },
+        {
+          "num": 5,
+          "title": "연어 스틱",
+          "level": "고급",
+          "time": "25분",
+          "writer": "healthydog",
+          "ingredients": ["연어", "감자 가루", "달걀", "오메가 3 보충제"],
+          "description": "고급 간식 연어 스틱 레시피로 건강한 영양소를 공급해보세요.",
+
+          "main image url": "http://localhost:3000/images/recipe02.jpg"
+        }
+      ],
+
+      "categories": {
+        "recipeBoardCategory": [
+          {
+            "name": "반려견",
+            "img_url": "http://localhost:3000/images/animal01.png",
+            "link": "/category/dog"
+          },
+
+          {
+            "name": "반려묘",
+            "img_url": "http://localhost:3000/images/animal02.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "반려햄",
+            "img_url": "http://localhost:3000/images/animal04.png",
+            "link": "/category/ham"
+          },
+          {
+            "name": "반려조",
+            "img_url": "http://localhost:3000/images/animal03.png",
+            "link": "/category/bird"
+          },
+          {
+            "name": "기타",
+            "img_url": "http://localhost:3000/images/animal05.png",
+            "link": "/category/etc"
+          }
+        ],
+
+        "chefBoardCategory": [
+          {
+            "name": "멍냥쉐프 1",
+            "img_url": "http://localhost:3000/images/animal01.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 2",
+            "img_url": "http://localhost:3000/images/animal02.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 3",
+            "img_url": "http://localhost:3000/images/animal03.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 4",
+            "img_url": "http://localhost:3000/images/animal04.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 5",
+            "img_url": "http://localhost:3000/images/animal05.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 6",
+            "img_url": "http://localhost:3000/images/animal06.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 7",
+            "img_url": "http://localhost:3000/images/animal07.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 8",
+            "img_url": "http://localhost:3000/images/animal08.png",
+            "link": "/category/cat"
+          },
+          {
+            "name": "멍냥쉐프 9",
+            "img_url": "http://localhost:3000/images/animal09.png",
+            "link": "/category/dog"
+          },
+          {
+            "name": "멍냥쉐프 10",
+            "img_url": "http://localhost:3000/images/animal10.png",
+            "link": "/category/cat"
+          }
+        ]
+      }
     },
+
     {
-      "num": 3,
-      "title": "고구마 쿠키",
-      "level": "중급",
-      "time": "30분",
-      "writer": "pawsandbites",
-      "ingredients": ["고구마", "계란", "현미 가루", "오메가 3 보충제"],
-      "description": "고구마를 활용한 건강한 간식인 고구마 쿠키 레시피입니다.",
-      "main_image_url": "http://localhost:3000/images/recipe03.jpg",
-      "likes": 30
-    },
-    {
-      "num": 4,
-      "title": "양고기 스튜",
-      "level": "중급",
-      "time": "40분",
-      "writer": "petfoodie",
-      "ingredients": ["양고기", "감자", "당근", "녹차"],
-      "description": "풍미 넘치는 양고기 스튜 레시피로 반려견을 맛있게 먹여주세요.",
-      "main_image_url": "http://localhost:3000/images/recipe04.jpg",
-      "likes": 0
-    },
-    {
-      "num": 5,
-      "title": "연어 스틱",
-      "level": "고급",
-      "time": "25분",
-      "writer": "healthydog",
-      "ingredients": ["연어", "감자 가루", "달걀", "오메가 3 보충제"],
-      "description": "고급 간식 연어 스틱 레시피로 건강한 영양소를 공급해보세요.",
-      "main_image_url": "http://localhost:3000/images/recipe02.jpg",
+      "main image url": "http://localhost:3000/images/recipe02.jpg",
       "likes": 0
     },
     {
@@ -62,7 +176,7 @@
       "writer": "fitcook",
       "ingredients": ["닭가슴살", "양파", "마늘", "간장"],
       "description": "건강한 닭가슴살 구이 레시피로 단백질 공급!",
-      "main_image_url": "http://localhost:3000/images/recipe03.jpg",
+      "main image url": "http://localhost:3000/images/recipe03.jpg",
       "likes": 0
     },
     {
@@ -73,7 +187,7 @@
       "writer": "veganlover",
       "ingredients": ["시금치", "고구마", "찹쌀 가루", "소금"],
       "description": "비건 레시피로 만드는 시금치 고구마 볼!",
-      "main_image_url": "http://localhost:3000/images/recipe04.jpg",
+      "main image url": "http://localhost:3000/images/recipe04.jpg",
       "likes": 0
     },
     {
@@ -84,7 +198,7 @@
       "writer": "healthylife",
       "ingredients": ["바나나", "요거트", "우유", "꿀"],
       "description": "간단하게 만드는 바나나 스무디 레시피!",
-      "main_image_url": "http://localhost:3000/images/recipe05.jpg",
+      "main image url": "http://localhost:3000/images/recipe05.jpg",
       "likes": 0
     },
     {
@@ -95,7 +209,7 @@
       "writer": "healthydog",
       "ingredients": ["사과", "치즈", "코코넛 가루", "계피"],
       "description": "과일과 치즈가 어우러진 맛있는 간식 사과 치즈 볼!",
-      "main_image_url": "http://localhost:3000/images/recipe06.jpg",
+      "main image url": "http://localhost:3000/images/recipe06.jpg",
       "likes": 0
     },
     {
@@ -106,96 +220,92 @@
       "writer": "fitcook",
       "ingredients": ["양파", "밀가루", "우유", "파우더"],
       "description": "간단하게 만드는 양파링 레시피!",
-      "main_image_url": "http://localhost:3000/images/recipe07.jpg",
+      "main image url": "http://localhost:3000/images/recipe07.jpg",
       "likes": 0
     }
   ],
- 
-  "categories":{
-    "recipeBoardCategory":[
-    
-        {
-          "name": "반려견", 
-          "img_url": "http://localhost:3000/images/animal01.png" ,
-          "link" : "/category/dog" 
-        },
-    
-        { 
-         "name": "반려묘", 
-         "img_url": "http://localhost:3000/images/animal02.png", 
-         "link": "/category/cat"  
-        },
-        { 
-         "name": "반려햄",
-         "img_url": "http://localhost:3000/images/animal04.png" , 
-         "link": "/category/ham"  
-        },
-        { 
-         "name": "반려조", 
-         "img_url": "http://localhost:3000/images/animal03.png", 
-         "link": "/category/bird"  
-        },
-        {
-         "name": "기타", 
-         "img_url": "http://localhost:3000/images/animal05.png", 
-         "link": "/category/etc"  
-        }
+
+  "categories": {
+    "recipeBoardCategory": [
+      {
+        "name": "반려견",
+        "img_url": "http://localhost:3000/images/animal01.png",
+        "link": "/category/dog"
+      },
+
+      {
+        "name": "반려묘",
+        "img_url": "http://localhost:3000/images/animal02.png",
+        "link": "/category/cat"
+      },
+      {
+        "name": "반려햄",
+        "img_url": "http://localhost:3000/images/animal04.png",
+        "link": "/category/ham"
+      },
+      {
+        "name": "반려조",
+        "img_url": "http://localhost:3000/images/animal03.png",
+        "link": "/category/bird"
+      },
+      {
+        "name": "기타",
+        "img_url": "http://localhost:3000/images/animal05.png",
+        "link": "/category/etc"
+      }
     ],
-    
-    "chefBoardCategory":[
-        
-        {
-            "name": "멍냥쉐프 1",
-            "img_url": "http://localhost:3000/images/chef01.png",
-            "link": "/category/dog"
-          },
-          {
-            "name": "멍냥쉐프 2",
-            "img_url": "http://localhost:3000/images/chef02.png",
-            "link": "/category/cat"
-          },
-          {
-            "name": "멍냥쉐프 3",
-            "img_url": "http://localhost:3000/images/chef03.png",
-            "link": "/category/dog"
-          },
-          {
-            "name": "멍냥쉐프 4",
-            "img_url": "http://localhost:3000/images/chef04.png",
-            "link": "/category/cat"
-          },
-          {
-            "name": "멍냥쉐프 5",
-            "img_url": "http://localhost:3000/images/chef05.png",
-            "link": "/category/dog"
-          },
-          {
-            "name": "멍냥쉐프 6",
-            "img_url": "http://localhost:3000/images/chef06.png",
-            "link": "/category/cat"
-          },
-          {
-            "name": "멍냥쉐프 7",
-            "img_url": "http://localhost:3000/images/chef07.png",
-            "link": "/category/dog"
-          },
-          {
-            "name": "멍냥쉐프 8",
-            "img_url": "http://localhost:3000/images/chef08.png",
-            "link": "/category/cat"
-          },
-          {
-            "name": "멍냥쉐프 9",
-            "img_url": "http://localhost:3000/images/chef09.png",
-            "link": "/category/dog"
-          },
-          {
-            "name": "멍냥쉐프 10",
-            "img_url": "http://localhost:3000/images/chef10.png",
-            "link": "/category/cat"
-          }
+
+    "chefBoardCategory": [
+      {
+        "name": "멍냥쉐프 1",
+        "img_url": "http://localhost:3000/images/chef01.png",
+        "link": "/category/dog"
+      },
+      {
+        "name": "멍냥쉐프 2",
+        "img_url": "http://localhost:3000/images/chef02.png",
+        "link": "/category/cat"
+      },
+      {
+        "name": "멍냥쉐프 3",
+        "img_url": "http://localhost:3000/images/chef03.png",
+        "link": "/category/dog"
+      },
+      {
+        "name": "멍냥쉐프 4",
+        "img_url": "http://localhost:3000/images/chef04.png",
+        "link": "/category/cat"
+      },
+      {
+        "name": "멍냥쉐프 5",
+        "img_url": "http://localhost:3000/images/chef05.png",
+        "link": "/category/dog"
+      },
+      {
+        "name": "멍냥쉐프 6",
+        "img_url": "http://localhost:3000/images/chef06.png",
+        "link": "/category/cat"
+      },
+      {
+        "name": "멍냥쉐프 7",
+        "img_url": "http://localhost:3000/images/chef07.png",
+        "link": "/category/dog"
+      },
+      {
+        "name": "멍냥쉐프 8",
+        "img_url": "http://localhost:3000/images/chef08.png",
+        "link": "/category/cat"
+      },
+      {
+        "name": "멍냥쉐프 9",
+        "img_url": "http://localhost:3000/images/chef09.png",
+        "link": "/category/dog"
+      },
+      {
+        "name": "멍냥쉐프 10",
+        "img_url": "http://localhost:3000/images/chef10.png",
+        "link": "/category/cat"
+      }
     ]
-
   }
-
 }
