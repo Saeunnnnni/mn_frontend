@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 900px;
+  height: 550px;
+  margin: 50px 0 100px;
 }
 
 .login-form {
@@ -24,8 +25,8 @@
 }
 
 .login-logo {
-  width: 215px;
-  margin-bottom: 25px;
+  width: 300px;
+  margin-bottom: 40px;
 }
 
 .error-message {

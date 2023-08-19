@@ -7,7 +7,7 @@ function MypageNav() {
 
   return (
     <div>
-      <div className="navbar">
+      <div className="mypage-navbar">
         <Link
           className={`navarMenu ${
             location.pathname === "/Mypage" ? "active" : ""

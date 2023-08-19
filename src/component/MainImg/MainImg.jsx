@@ -37,7 +37,7 @@ const MainImg = () => {
 };
 
 const mainImg = {
-    width: '1200px',
+    width: '1280px',
     height: '500px',
     margin: '50px 0'
     
