@@ -32,14 +32,14 @@ function MypageNav() {
         >
           나의 댓글
         </Link>
-        <Link
+        {/* <Link
           className={`navarMenu ${
             location.pathname === "/Like" ? "active" : ""
           }`}
           to={"/Like"}
         >
           좋아요
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

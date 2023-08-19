@@ -103,7 +103,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup-container">
+    <div className="signup-container container ">
       <h1>회원가입</h1>
       <hr />
       <form className="signup-form">

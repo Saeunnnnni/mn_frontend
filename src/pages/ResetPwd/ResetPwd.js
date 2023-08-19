@@ -42,6 +42,7 @@ const PasswordReset = () => {
           <div>
             <p>가입한 이메일 주소를 입력해주세요.</p>
             <input
+              className="email-input"
               type="email"
               placeholder="이메일"
               value={email}
