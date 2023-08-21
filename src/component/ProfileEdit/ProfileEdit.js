@@ -57,7 +57,6 @@ const ProfileEdit = () => {
     <div className="profile-edit-form">
       <div className="profile-edit-top">
         <h2>회원정보 수정</h2>
-
         <Link className="withDrawal" to="/withDrawal">
           탈퇴하기
         </Link>
@@ -137,7 +136,9 @@ const ProfileEdit = () => {
           비밀번호 변경
         </button>
       </form>
+      
     </div>
+    
   );
 };
 
