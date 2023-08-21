@@ -32,10 +32,10 @@ function Header() {
                                 <Link to="/notice">공지</Link>
                             </li>
                             <li>
-                                <Link to="/recipe">게시판</Link>
+                                <Link to="/recipeList">게시판</Link>
                             </li>
                             <li>
-                                <Link to="/party">축하파티</Link>
+                                <Link to="/partyList">축하파티</Link>
                             </li>
                         </ul>
                     </nav>
@@ -55,6 +55,7 @@ function Header() {
                     <form onSubmit={searchSubmit}> 
                         <div className="search">
                             <input
+                                className="search-input"
                                 type="text"
                                 placeholder="통합 검색"
                                 value={keyword}

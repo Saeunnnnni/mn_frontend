@@ -3,7 +3,11 @@ import React from 'react';
 const NoticeBoard = () => {
     return (
         <div className='container'>
-            <div className='board'></div>
+            <div className='board'>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
             
         </div>
     );

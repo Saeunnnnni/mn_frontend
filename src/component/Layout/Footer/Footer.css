@@ -1,11 +1,11 @@
 .footer-container {
-
     width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: column;
     border-top: 1px solid lightgray;
     background-color: #eeeeee;
+    margin-top: 250px;
 }
 
 

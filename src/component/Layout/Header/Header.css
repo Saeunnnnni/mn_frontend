@@ -3,8 +3,8 @@
     position: relative;
     width: 1280px;
     margin: 0 auto;
-    margin-bottom: 30px;
-    margin-top: 25px;
+    margin-bottom: 35px;
+    margin-top: 35px;
 }
 
 .header {
@@ -20,11 +20,11 @@
 }
 
 .logo {
-    width: 120px;
+    width: 100px;
 }
 
 .main-nav {
-    margin-top: 110px;
+    margin-top: 90px;
 }
 
 .main-nav ul {
@@ -67,7 +67,7 @@
     flex-direction: column; /* 위아래로 배치 */
     align-items: center;
     margin-right: 30px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .sub-nav {
@@ -109,7 +109,7 @@
     margin-right: -30px;
 }
 
-.search > input {
+.search-input {
     /* input 스타일 */
     width: 180px;
     height: 30px;

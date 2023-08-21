@@ -37,17 +37,6 @@
   font-size: 16px;
 }
 
-.reset::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -30px; /* 세로선의 오른쪽 위치 조절 */
-  transform: translateY(-50%);
-  width: 1px;
-  height: 15px;
-  background-color: lightgray;
-}
-
 .login-links a {
   margin-right: 20px;
   text-decoration: none;

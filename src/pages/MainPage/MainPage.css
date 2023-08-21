@@ -7,18 +7,18 @@
     border-radius: 20px; /* imgWrapper의 테두리를 둥글게 만듦 */
   }
   
-  .image {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: -10%;
-    border-radius: 20px; /* img의 테두리를 둥글게 만듦 */
-  }
-
+.image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -10%;
+  border-radius: 20px; /* img의 테두리를 둥글게 만듦 */
+}
 
 .board-title {
-    font-size:28px;
-    margin:30px 0 15px 0;
-    font-weight:bold;
-};
+    font-size: 28px;
+    margin: 70px 0 15px 0;
+    font-weight: bold;
+}
+
 

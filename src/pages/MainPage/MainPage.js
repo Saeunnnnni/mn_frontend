@@ -1,7 +1,7 @@
 import React ,{ useState, useEffect} from 'react'
 import './MainPage.css'
 import Banner from '../../component/Banner/Banner';
-import CardList from '../../component/CardList/CardList';
+import CardList from '../../component/CardList/RecipeCardList';
 import axios from 'axios';
 
 function MainPage() {
@@ -41,6 +41,7 @@ function MainPage() {
 
         <div className='board-title'>오늘의 🎉<span style={{ color: "#ff6a10" }} >주인공 </span></div>
         <CardList cards={partyCards} showTitle={false} />
+
 
     </div>
   )
