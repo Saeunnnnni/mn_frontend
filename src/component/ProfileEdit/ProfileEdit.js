@@ -56,40 +56,7 @@ const ProfileEdit = () => {
   return (
     <div className="profile-edit-form">
       <div className="profile-edit-top">
-<<<<<<< HEAD
-          <h2>회원정보 수정</h2>
-          
-          <Link className="withDrawal" to="/withDrawal">
-            탈퇴하기
-          </Link>
-         
-        </div>
-      <form className="formStyle">
-        
-        <div className="profile-edit-input">
-        <label>이메일</label>
-        <input
-          className="box"
-          type="email"
-          value={email}
-          onChange={handleEmailChange}
-        />
-        </div>
-        <div className="profile-edit-input">
-        <label>별명</label>
-        <input
-          className="box"
-          type="text"
-          value={nickname}
-          onChange={handleNicknameChange}
-        />
-        </div>
-        <div className="profile-gender-input">
-        <label>성별</label>
-        <label className="radio-man">
-=======
         <h2>회원정보 수정</h2>
-
         <Link className="withDrawal" to="/withDrawal">
           탈퇴하기
         </Link>
@@ -106,7 +73,6 @@ const ProfileEdit = () => {
         </div>
         <div className="profile-edit-input">
           <label>별명</label>
->>>>>>> upstream/lee
           <input
             className="box"
             type="text"
@@ -144,41 +110,6 @@ const ProfileEdit = () => {
             value={birthdate}
             onChange={handleBirthdateChange}
           />
-<<<<<<< HEAD
-          여자
-        </label>
-        </div>
-        <div className="profile-edit-input">
-        <label>생년월일</label>
-        <input
-          className="box"
-          type="text"
-          placeholder="YYYY-MM-DD"
-          value={birthdate}
-          onChange={handleBirthdateChange}
-        />
-        </div>
-        <div className="profile-edit-image">
-        <label>프로필 이미지</label>
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleProfileImageChange}
-        />
-        </div>
-        <div className="profile-edit-input">
-        {profileImage && <img src={profileImage} alt="프로필 이미지" />}
-        <label>한줄소개</label>
-        <input
-          className="box"
-          type="text"
-          value={bio}
-          onChange={handleBioChange}
-        />
-        </div>
-        <button onClick={handleProfileUpdate}>회원정보 수정</button>
-        <button onClick={handlePasswordChange}>비밀번호 변경</button>
-=======
         </div>
         <div className="profile-edit-image">
           <label>프로필 이미지</label>
@@ -204,7 +135,6 @@ const ProfileEdit = () => {
         <button className="pwd-edit-button" onClick={handlePasswordChange}>
           비밀번호 변경
         </button>
->>>>>>> upstream/lee
       </form>
       
     </div>

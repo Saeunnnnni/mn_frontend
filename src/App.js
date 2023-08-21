@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from './pages/MainPage/MainPage.js';
-import Header from './component/Layout/Header/Header.js';
-import Footer from './component/Layout/Footer/Footer.js';
+import Header from './component/Header/Header.js';
+import Footer from './component/Footer/Footer.js';
 import RecipeDetail from './pages/Recipe/RecipeDetail.js';
 import Notice from './pages/Notice/NoticeBoard.js';
 import Recipe from './pages/Recipe/RecipeBoard.js';
