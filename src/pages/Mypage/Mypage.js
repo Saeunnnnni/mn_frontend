@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../component/Layout/Header/Header";
+import Header from "../../component/Header/Header";
 import MypageNav from "../../component/MypageNav/MypageNav";
 import Profile from "../../component/Profile/Profile";
 import ProfileEdit from "../../component/ProfileEdit/ProfileEdit";
