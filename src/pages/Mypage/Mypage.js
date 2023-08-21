@@ -1,20 +1,21 @@
 import React from "react";
+import Header from "../../component/Header/Header";
 import MypageNav from "../../component/MypageNav/MypageNav";
 import Profile from "../../component/Profile/Profile";
-import ProfileEditForm from "../../component/ProfileEdit/ProfileEdit";
-import { Link } from "react-router-dom";
+import ProfileEdit from "../../component/ProfileEdit/ProfileEdit";
 import "./Mypage.css"; // 위에서 작성한 CSS 파일을 임포트하고 있다고 가정합니다.
 
 const Mypage = () => {
   return (
     <div>
+      <Header />
       <hr />
       <MypageNav />
       <hr />
-      <div className="myPage-content container">
-        <Profile />
-        <ProfileEditForm  />
 
+      <div className="mypage-content container">
+        <Profile />
+        <ProfileEdit />
       </div>
     </div>
   );

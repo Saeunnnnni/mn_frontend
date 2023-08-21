@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from './pages/MainPage/MainPage.js';
 import Header from './component/Layout/Header/Header.js';
@@ -17,21 +17,22 @@ import PartyList from './pages/Party/PartyList.jsx';
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path="/" element={<MainPage/>}/>
-        <Route path="/notice" element={<Notice/>}/>
-        <Route path="/recipe" element={<Recipe/>}/>
-        <Route path="/party" element={<Party/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/resetPwd" element={<ResetPwd/>}/>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/notice" element={<Notice />} />
+        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/party" element={<Party />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/recipeDetail" element={<RecipeDetail/>}/>
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/recipeList" element={<RecipeList />} />
         <Route path="/partyList" element={<PartyList/>}/>
+
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }

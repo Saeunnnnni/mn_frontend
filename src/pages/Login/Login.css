@@ -15,12 +15,13 @@
 }
 
 .login-form input {
-  width: 350px;
+  width: 330px;
   height: 60px;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   margin-bottom: 3px;
   font-size: 18px;
+  padding-left: 20px;
 }
 
 .login-logo {
@@ -38,13 +39,25 @@
 }
 
 .login-links a {
-  margin-right: 20px;
+  margin-right: 44px;
   text-decoration: none;
-  color: #333;
+  color: #ba7149;
+  font-weight: 500;
 }
 
 .login-links a:last-child {
   margin-right: 0;
+}
+
+.login-links a:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background-color: lightgray;
+  margin: 0 21px;
+  vertical-align: middle;
+  position: absolute;
 }
 
 .login-button {
@@ -73,12 +86,13 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: #ff6a10;
+  background: #ffffff;
   transition: all 0.3s ease;
 }
 
 .login-button:hover {
-  color: #ffd7c5;
+  color: #ba7149;
+  border: 1px solid #ba7149;
 }
 
 .login-button:hover:after {

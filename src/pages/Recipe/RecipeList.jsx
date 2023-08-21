@@ -1,6 +1,6 @@
 import React from 'react';
 import RecipeCardList from '../../component/CardList/RecipeCardList';
-import './Recipe.css';
+import './RecipeList.css';
 import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
