@@ -129,7 +129,7 @@
       "writer": "quickcook",
       "ingredients": ["닭가슴살", "빵가루", "밀가루", "달걀"],
       "description": "간편하게 만드는 치킨 너겟 레시피입니다.",
-      "main_image_url": "http://localhost:3000/images/recipe01.jpg",
+      "main_image_url": "http://localhost:3000/images/recipe03.jpg",
       "likes": 5
     },
     {
