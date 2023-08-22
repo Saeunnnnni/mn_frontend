@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route} from "react-router-dom";
 import { Link } from "react-router-dom";
 import SearchBar from '../../component/SearchBar/SearchBar';
 import ImageCategory from '../../component/ImageCategory/ImageCategory';
@@ -6,11 +7,12 @@ import MainImg from '../../component/MainImg/MainImg';
 import axios from 'axios';
 import SlickSlider from '../../lib/slickSlide'; 
 import { Arrow } from '../../lib/arrow'; 
-import RecipeCardList from '../../component/CardList/RecipeCardList';
-import PartyCardList from '../../component/CardList/PartyCardList';
+import MainRecipeCardList from '../../component/CardList/MainRecipeCardList';
+import MainPartyCardList from '../../component/CardList/MainPartyCardList';
+import CategoryList from './CategoryList';
   
 
-const RecipeBoard = () => {
+const RecipeBoard = ({ recipes }) => {
      /*json이 저장된 주소를 불러와서 변수에 담기 */
  const categoriesUrl = "http://localhost:5000/categories";  
   
@@ -57,11 +59,10 @@ const RecipeBoard = () => {
       nextArrow: <Arrow />,
       prevArrow: <Arrow />
     };
-
+console.log(recipes)
       
       
-    return (
- 
+    return ( 
       
           <div className='container'>
             <div className='RecipeBoard-mainImg'>
@@ -74,13 +75,16 @@ const RecipeBoard = () => {
           <Link to="/recipeList" className='recipe-list-Go'>더 많은 레시피 보러가기</Link>
           </div>
           
-               <ImageCategory categories={categories.recipeBoardCategory} /> 
+        <ImageCategory categories={categories.recipeBoardCategory} /> 
+        <Routes>
+        <Route path="/recipes/:categoryName" element={<CategoryList recipes={recipes} />} />
+      </Routes>
               
               <p className='board-title'>화제의 TOP 레시피</p>
       
             {/* card list  + slider 적용 */}
              <SlickSlider items={cards.map((card, index) => (
-                <RecipeCardList key={index} cards={[card]} />
+                <MainRecipeCardList key={index} cards={[card]} />
             ))} settings={CardSettings} /> 
         
   
@@ -101,7 +105,7 @@ const RecipeBoard = () => {
               {/* 오늘의 레시피 추천 리스트 */}
               {/*   <CardList cards={cards.slice(4, 8)} showTitle={false}/> */}
               <SlickSlider items={cards.map((card, index) => (
-                      <PartyCardList key={index} cards={[card]} />
+                      <MainRecipeCardList key={index} card={[card]} />
                   ))} settings={CardSettings} /> 
               </div>
       

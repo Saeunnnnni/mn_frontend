@@ -3,6 +3,7 @@ import './CardList.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const Card = ({ card }) => {
@@ -20,7 +21,7 @@ const Card = ({ card }) => {
     
     return (
         <div className="card">            
-            <img className="card-img" src={card.main_image_url} alt={card.title} />
+            <Link to={`/RecipeDetail/${card.id}`}><img className="card-img" src={card.main_image_url} alt={card.title} /></Link>
 
             <div className='card-title-box'>
                 <h2 className="cardList-title">{card.title}</h2>

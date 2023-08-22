@@ -12,7 +12,6 @@ const Mypage = () => {
       <hr />
       <MypageNav />
       <hr />
-
       <div className="mypage-content container">
         <Profile />
         <ProfileEdit />
