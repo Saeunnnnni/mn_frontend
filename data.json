@@ -239,33 +239,31 @@
       }
     ]
   },
-  "partyList": [ 
+  "partyList": [
     {
-      "title": "뽀삐의 생일파티🐶🎉", 
-      "main_image_url": "http://localhost:3000/images/party_img01.jpg", 
-      "link": "/category/etc"  
-     },
-     {
-      "title": "우리집 멍뭉이의 생일파티💛", 
-      "main_image_url": "http://localhost:3000/images/party_img02.jpg", 
-      "link": "/category/etc"  
-     },
-     {
-      "title": "둥이들 100일파티😻", 
-      "main_image_url": "http://localhost:3000/images/party_img03.jpg", 
-      "link": "/category/etc"  
-     },
-     {
-      "title": "초코 1000일 기념❤️❤️", 
-      "main_image_url": "http://localhost:3000/images/party_img04.jpg", 
-      "link": "/category/etc"  
-     },
-     {
-      "title": "햄냥이의 파티에 초대합니다!🎉🎉", 
-      "main_image_url": "http://localhost:3000/images/party_img05.png", 
-      "link": "/category/etc"  
-     }
-    
+      "title": "뽀삐의 생일파티🐶🎉",
+      "main_image_url": "http://localhost:3000/images/party_img01.jpg",
+      "link": "/category/etc"
+    },
+    {
+      "title": "우리집 멍뭉이의 생일파티💛",
+      "main_image_url": "http://localhost:3000/images/party_img02.jpg",
+      "link": "/category/etc"
+    },
+    {
+      "title": "둥이들 100일파티😻",
+      "main_image_url": "http://localhost:3000/images/party_img03.jpg",
+      "link": "/category/etc"
+    },
+    {
+      "title": "초코 1000일 기념❤️❤️",
+      "main_image_url": "http://localhost:3000/images/party_img04.jpg",
+      "link": "/category/etc"
+    },
+    {
+      "title": "햄냥이의 파티에 초대합니다!🎉🎉",
+      "main_image_url": "http://localhost:3000/images/party_img05.png",
+      "link": "/category/etc"
+    }
   ]
 }
-
