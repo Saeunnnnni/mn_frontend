@@ -1,9 +1,10 @@
 // RecipeDetail.js
-
 import "./RecipeDetail.css";
 import ReactPaginate from "react-paginate";
 import ReplyItem from "../../component/ReplyItem/ReplyItem";
-
+import ReactPaginate from "react-paginate"; 
+//import { useParams } from 'react-router-dom';   //id값을 전달하기 위한 params
+//const { id } = useParams(); // URL 파라미터에서 id 추출
 // 백엔드와 연동할 데이터 모음
 const data = {
   mainImg:
@@ -184,6 +185,8 @@ export default function Page() {
     </main>
   );
 }
+
+
 
 // 구분선
 function Divider() {

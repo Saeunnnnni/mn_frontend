@@ -20,3 +20,7 @@
     margin: 70px 0 15px 0;
     font-weight: bold;
 }
+
+.MainPage .card-img{
+  border-radius: 50%;
+}

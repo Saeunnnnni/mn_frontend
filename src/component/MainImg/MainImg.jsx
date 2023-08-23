@@ -31,6 +31,7 @@ const MainImg = () => {
 
     return (
         <div className='mainImg' >
+            <p style={titleStyle}>🏆BEST RECIPE</p> 
         {mostLikedRecipe && <img src={mostLikedRecipe.main_image_url} alt={mostLikedRecipe.title} style={mainImg}/>}
     </div>
     );
@@ -39,8 +40,16 @@ const MainImg = () => {
 const mainImg = {
     width: '1280px',
     height: '500px',
-    margin: '50px 0'
+    margin: '5px 0 50px'
     
 }
+
+
+const titleStyle = {
+    fontSize:'20px',
+    margin:'50px 0 15px 0',
+    fontWeight: 'bold',
+    
+  };
 
 export default MainImg;

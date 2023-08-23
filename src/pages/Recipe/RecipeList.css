@@ -1,12 +1,25 @@
+.recipe-lis .card{
+    margin-right: 0 ;
+}
+
+.recipe-list .card-img{
+    width: 400px ;
+    height: 300px;
+}
+
+.recipe-lis .card-title-box {
+    width: 400px;
+}
 .recipe-list .card-list{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 .recipe-list-top{
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
+    margin: 80px 0 30px;
 }
 
 .list-total-count{
@@ -15,9 +28,19 @@
 }
 
 .write-go{
-    font-size: 25px;
-    border: 1px solid black;
+    height: 15px;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: var(--color-orange);
 
+
+}
+
+.write-go:hover{
+    background-color: rgb(255, 106, 16, 0.8);
+    color: #ffffff;
+    border: 1px solid white;
 }

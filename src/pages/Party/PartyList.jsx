@@ -1,7 +1,7 @@
 import React from 'react';
 import './PartyList.css';
 import { Link } from 'react-router-dom';
-import PartyCardList from '../../component/CardList/PartyCardList';
+import BoardPartyCardList from '../../component/CardList/BoardPartyCardList';
 
 const RecipeList = () => {
     return (
@@ -10,7 +10,7 @@ const RecipeList = () => {
                 <p className='list-total-count'>전체 개 </p>
                 <Link className='write-go'>글작성</Link>
             </div>
-            <PartyCardList />
+            <BoardPartyCardList />
         </div>
     );
 };
