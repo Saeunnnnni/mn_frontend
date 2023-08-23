@@ -196,7 +196,9 @@ const ProfileEdit = () => {
           비밀번호 변경
         </button>
       </form>
+      
     </div>
+    
   );
 };
 
