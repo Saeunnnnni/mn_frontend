@@ -39,7 +39,7 @@ const Login = () => {
 
     try {
       // 실제 로그인 요청 처리 (axios를 사용하여 백엔드 API 호출)
-      const response = await axios.post("http://localhost:9999/login", {
+      const response = await axios.post("/user/login", {
         userEmail: email,
         userPwd: password,
       });
@@ -72,11 +72,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <form className="login-form">
-        <img
-          src="images/mnLogo04.png"
-          alt="mnLogo01"
-          className="login-logo"
-        />
+        <img src="images/mnLogo04.png" alt="mnLogo01" className="login-logo" />
         <input
           type="text"
           placeholder="이메일"
@@ -95,7 +91,9 @@ const Login = () => {
           로그인
         </button>
         <div className="login-links">
-          <Link to="/ResetPwd" className="reset">비밀번호 재설정</Link>
+          <Link to="/ResetPwd" className="reset">
+            비밀번호 재설정
+          </Link>
           <Link to="/Signup">회원가입하기</Link>
         </div>
       </form>

@@ -27,9 +27,9 @@ const Signup = () => {
     }
     setPasswordError(""); // 일치하면 에러 메시지 초기화
 
-    // 실제 로그인 요청 처리 (axios를 사용하여 백엔드 API 호출)
+    // json 파일 post 타입으로 insert 하기
     const response = axios
-      .post("member/insert", {
+      .post("auth/signup", {
         userEmail: email,
         userPwd: password,
         userNickName: nickname,

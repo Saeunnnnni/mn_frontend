@@ -9,8 +9,9 @@ import Recipe from "./pages/Recipe/RecipeBoard.js";
 import Party from "./pages/Party/PartyDetail.js";
 import Login from "./pages/Login/Login.js";
 import Signup from "./pages/Signup/Signup.js";
+import Mypage from "./pages/Mypage/Mypage.js";
 import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
-import MyPage from "./pages/Mypage/Mypage.js";
+import ChangePwd from "./pages/ChangePwd/ChangePwd.js";
 
 function App() {
   return (
@@ -21,11 +22,12 @@ function App() {
         <Route path="/notice" element={<Notice />} />
         <Route path="/recipe" element={<Recipe />} />
         <Route path="/party" element={<Party />} />
+        <Route path="/mypage" element={<Mypage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/recipeDetail" element={<RecipeDetail />} />
-        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/changPwd" element={<ChangePwd />} />
       </Routes>
       <Footer />
     </BrowserRouter>

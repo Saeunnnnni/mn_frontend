@@ -1,6 +1,6 @@
 .profile-edit-form {
   width: 850px;
-  height: 700px;
+  height: 880px;
   margin-top: 60px;
   margin-left: 45px;
   display: flex;
@@ -14,7 +14,7 @@
 .profile-edit-input {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .profile-edit-input input {
@@ -23,6 +23,10 @@
 .profile-edit-top {
   display: flex;
   justify-content: space-between;
+}
+
+.imgInput {
+  margin-left: 18px;
 }
 
 .withDrawal {
@@ -52,6 +56,7 @@
 .profile-edit-form label {
   font-size: 20px;
   margin-right: 20px;
+  margin: auto 0;
 }
 
 .profile-edit-form h2 {
@@ -60,7 +65,11 @@
 }
 
 .profile-edit-form button {
-  margin-top: 60px;
+  margin-top: 50px;
+}
+
+.profile-edit-image {
+  margin-bottom: 20px;
 }
 
 .users-edit-button {
