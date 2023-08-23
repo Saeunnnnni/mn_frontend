@@ -27,17 +27,18 @@ function App() {
         <Route path="/notice" element={<Notice />} />
         <Route path="/recipe" element={<Recipe />} />
         <Route path="/party" element={<Party />} />
+        <Route path="/mypage" element={<Mypage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/recipeDetail" element={<RecipeDetail/>}/>
+        <Route path="/recipeDetail" element={<RecipeDetail />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/recipeList" element={<RecipeList />} />
         <Route path="/partyList" element={<PartyList/>}/>
         <Route path="/notice" element={<NoticeBoard />}></Route>
         <Route path="/noticeDetail" element={<NoticeDetail/>}></Route>
          {/*  <Route path="/recipes/:categoryName"  element={<CategoryList recipes={recipes}/>} /> */}
-        
+
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -421,7 +421,7 @@
       }
     ]
   },
-  "partyList": [ 
+  "partyList": [
     {
       "title": "뽀삐의 생일파티🐶🎉", 
       "main_image_url": "http://localhost:3000/images/party_img01.jpg", 
@@ -511,6 +511,6 @@
       "createdDate": "2023-06-03"
     }
     
+
   ]
 }
-
