@@ -30,7 +30,7 @@ const RecipeList = () => {
         <div className='recipe-list container'>
             <div className='recipe-list-top'>
                 <p className='list-total-count'>전체 {totalRecipeCount} 개 </p>
-                <Link className='write-go'>글작성</Link>
+                <Link className='write-go'>글쓰기</Link>
             </div>
             <BoardRecipeCardList />
         

@@ -28,15 +28,19 @@
 }
 
 .write-go{
-    font-size: 25px;
-    border: 1px solid black;
+    height: 15px;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: var(--color-orange);
+
 
 }
 
 .write-go:hover{
-    background-color: var(--color-middle-brown);
+    background-color: rgb(255, 106, 16, 0.8);
     color: #ffffff;
     border: 1px solid white;
 }
