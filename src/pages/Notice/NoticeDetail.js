@@ -1,4 +1,7 @@
 import './NoticeDetail.css';
+import axios from 'axios';
+import { useState } from 'react';   
+import { Link } from 'react-router-dom';
 
 // 백엔드와 연동할 데이터
 const data = {
@@ -10,6 +13,9 @@ const data = {
 
 // 페이지 로딩 시 출력되는 화면내용
 export default function Page(){
+
+    const [list, setList] = useState([]);
+
     return (
         <main className="notice_detail_main">
             <div className="notice_detail_titlebox">
@@ -33,6 +39,7 @@ export default function Page(){
                 {data.content}
             </div>
             <Divider />
+            <Link to={"/Notice"}>목록</Link>
         </main>
     );
 }

@@ -2,6 +2,7 @@
 
 import "./RecipeDetail.css";
 import ReactPaginate from "react-paginate";
+import ReplyItem from "../../component/ReplyItem/ReplyItem";
 
 // 백엔드와 연동할 데이터 모음
 const data = {
@@ -153,6 +154,9 @@ export default function Page() {
         {data.reply.map((item, index) => (
           <ReplyItem key={index} {...item} />
         ))}
+
+        
+
         {/* 페이징 처리 */}
         <ReactPaginate
           // 총 게시글의 수
@@ -196,25 +200,6 @@ function StepItem({ desc, img, ingre }) {
         <div>
           <img src={ingre} alt="ingre img" />
         </div>
-      </div>
-    </div>
-  );
-}
-
-// 댓글을 생성하는 function
-function ReplyItem({ thumb, name, content, createdAt }) {
-  return (
-    <div className="recipe_detail_reply_item">
-      <div className="image_container">
-        <img src={thumb} alt="reply thumb" />
-      </div>
-      <div>
-        <div className="insight">
-          <span>{name}</span>
-          <span>{createdAt}</span>
-          <span>답글</span>
-        </div>
-        <p>{content}</p>
       </div>
     </div>
   );

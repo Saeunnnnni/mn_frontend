@@ -1,5 +1,6 @@
 import ReactPaginate from 'react-paginate';
 import './PartyDetail.css';
+import ReplyItem from '../../component/ReplyItem/ReplyItem';
 
 // 백엔드와 연동할 데이터 모음
 const data = {
@@ -199,25 +200,6 @@ export default function Page(){
 // 구분선
 function Divider() {
     return <div className="party_detail_divider" />;
-}
-
-// 댓글을 생성하는 function
-function ReplyItem({thumb, name, content, createdAt}){
-    return(
-        <div className="party_datail_reply_item">
-            <div className="image_container">
-                <img src={thumb} alt="reply thumb" />
-            </div>
-            <div>
-                <div className="insight">
-                    <span>{name}</span>
-                    <span>{createdAt}</span>
-                    <span>답글</span>
-                </div>
-                <p>{content}</p>
-            </div>
-        </div>
-    );
 }
 
 // 페이징 처리에서 next function
