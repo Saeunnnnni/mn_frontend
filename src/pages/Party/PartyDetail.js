@@ -204,7 +204,7 @@ function Divider() {
 // 댓글을 생성하는 function
 function ReplyItem({thumb, name, content, createdAt}){
     return(
-        <div className="party_datail_reply_item">
+        <div className="party_detail_reply_item">
             <div className="image_container">
                 <img src={thumb} alt="reply thumb" />
             </div>
