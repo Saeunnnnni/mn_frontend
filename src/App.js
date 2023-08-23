@@ -14,6 +14,7 @@ import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
 import MyPage from "./pages/Mypage/Mypage.js";
 import RecipeList from "./pages/Recipe/RecipeList.jsx";
 import PartyList from "./pages/Party/PartyList.jsx";
+import NoticeDetail from "./pages/Notice/NoticeDetail.js";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/recipeList" element={<RecipeList />} />
         <Route path="/partyList" element={<PartyList />} />
+        <Route path="/noticeDetail" element={<NoticeDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
