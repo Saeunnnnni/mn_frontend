@@ -22,13 +22,13 @@
     display: flex;
     margin: 0 auto;
 }
-.searchImg{
+.search-Img{
     height: 30px;
 }
-.searchImg:hover{
+.search-Img:hover{
     filter: invert(62%) sepia(87%) saturate(275%) hue-rotate(344deg) brightness(102%) contrast(98%);
 }
-#searchBtn{
+#search-Btn{
     border: none;
     background-color: #ffffff;
     position: absolute;
@@ -36,4 +36,3 @@
     top: 7px;
     cursor: pointer;
 }
-

@@ -1,28 +1,15 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import './CardList.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 
 
-
-
-const Card = ({ recipe,  showTitle}) => {
-    //레시피를 like버튼을 누르면 서버에 전송
-    const [likes, setLikes] = useState(recipe.likes);    
-
-    const handleLike = () => {
-        axios.post('http://localhost:5000/recipe', { cardId: recipe.num, isLiked: !isLiked })
-            .then(response => {
-                const updatedLikes = response.data.updatedLikes;
-                setLikes(updatedLikes);
-            })
-            .catch(error => {
-                console.error('Error updating likes:', error);
-            });
-    };
+const Card = ({ card }) => {
     
-
+        //레시피를 like버튼을 누르면 서버에 전송
+    //const [likes, setLikes] = useState(item.likes);  
+        
     //아이콘 like를 눌렀을때
     const [isLiked, setIsLiked] = useState(false);
 
@@ -30,24 +17,21 @@ const Card = ({ recipe,  showTitle}) => {
         setIsLiked(prevIsLiked => !prevIsLiked);
     };
 
-
-
+    
     return (
-        <div className="card">
-            
-            <img className="card-img" src={recipe.main_image_url} alt={recipe.title} />
+        <div className="card">            
+            <img className="card-img" src={card.main_image_url} alt={card.title} />
 
             <div className='card-title-box'>
-                {showTitle && <h2 className="cardList-title">{recipe.title}</h2>}
+                <h2 className="cardList-title">{card.title}</h2>
                 <div className='like-box'>
-                    <button className='heart-btn' onClick={handleLike}>
+                    <button className='heart-btn' >
                         <FontAwesomeIcon icon={isLiked ? faHeartSolid : faHeartRegular} style={{ color: isLiked ? '#ff6a10' : 'black' }}onClick={handleToggleLike} />
-                </button>
+                    </button>
            
                     {/* <p>{likes}</p> */}
                 </div>
             </div>
-
            
         </div>
     );

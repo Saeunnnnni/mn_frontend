@@ -1,5 +1,5 @@
 /* MypageNav.css */
-.navbar {
+.mypage-navbar {
   font-size: 21px;
   font-weight: 700;
   display: flex;
@@ -24,7 +24,7 @@
   bottom: -12px; /* 바의 위치 설정 */
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: #ff6a10;
 }
 

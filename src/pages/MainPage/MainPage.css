@@ -1,11 +1,22 @@
-.container{
-    position: relative;
-    width: 80%;
-    margin: 0 auto;  
-}
 .imgWrapper {
-    width: 100%;
+    width: 1280px;
+    height: 500px;
+    overflow: hidden;
     margin: 0 auto;
     position: relative;
-    border-radius: 10px;
+    border-radius: 20px; /* imgWrapper의 테두리를 둥글게 만듦 */
+  }
+  
+.image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -10%;
+  border-radius: 20px; /* img의 테두리를 둥글게 만듦 */
+}
+
+.board-title {
+    font-size: 28px;
+    margin: 70px 0 15px 0;
+    font-weight: bold;
 }

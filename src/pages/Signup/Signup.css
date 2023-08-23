@@ -1,10 +1,7 @@
-/* Signup.css */
 .signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 70px;
-  margin-bottom: 100px;
 }
 
 .signup-container h1 {
@@ -12,6 +9,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 370px;
+  margin-top: 200px;
   margin-bottom: 3px;
   font-size: 24px;
   font-weight: 700;
@@ -34,18 +32,20 @@
   justify-content: flex-start;
   width: 370px;
   margin-top: 5px;
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
 }
 
 .signup-form input {
-  width: 370px;
+  width: 360px;
   height: 40px;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   margin-top: 3px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 15px;
+  padding-left: 10px;
 }
 
 .emailCheck-button {
@@ -56,9 +56,40 @@
   font-weight: 400;
   background-color: #ba7149;
   color: white;
+  line-height: 42px;
   padding: 0;
   border: none;
-  margin-bottom: 25px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.emailCheck-button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.emailCheck-button:hover {
+  color: #ba7149;
+  border: 1px solid #ba7149;
+}
+
+.emailCheck-button:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.emailCheck-button:active {
+  top: 2px;
 }
 
 .signup-span {
@@ -84,10 +115,11 @@
 }
 
 .signup-pets {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .signup-pets label {
@@ -104,13 +136,14 @@
 
 .signup-agree {
   display: flex;
+  justify-content: center;
   width: 370px;
-  height: 180px;
+  height: 250px;
   flex-direction: column;
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .signup-agree label {
@@ -123,6 +156,7 @@
   margin-right: 8px;
   width: 13px;
   height: 13px;
+  margin-top: 16px;
 }
 
 .signup-button {
@@ -133,13 +167,35 @@
   font-weight: 500;
   background-color: #ba7149;
   color: white;
+  line-height: 42px;
   padding: 0;
   border: none;
-  margin-top: 25px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.signup-button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .signup-button:hover {
-  background-color: #000;
+  color: #ba7149;
+  border: 1px solid #ba7149;
+}
+
+.signup-button:hover:after {
+  top: 0;
+  height: 100%;
 }
 
 .signup-button:active {
