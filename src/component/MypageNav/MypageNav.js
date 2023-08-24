@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import React from "react";
-import "./MypageNav.css"; // CSS 파일 임포트
+import "./MyPageNav.css"; // CSS 파일 임포트
 
 function MypageNav() {
   const location = useLocation();
@@ -10,9 +10,9 @@ function MypageNav() {
       <div className="mypage-navbar">
         <Link
           className={`navarMenu ${
-            location.pathname === "/Mypage" ? "active" : ""
+            location.pathname === "/MyPage" ? "active" : ""
           }`}
-          to={"/Mypage"}
+          to={"/MyPage"}
         >
           마이페이지
         </Link>
