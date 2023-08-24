@@ -1,12 +1,7 @@
 import React, {useRef} from 'react';
 import axios from "axios";
 import './SearchBar.css';
-<<<<<<< HEAD
-import './index.css';
-import './SearchBar.css';
 
-=======
->>>>>>> upstream/lee
 const SearchBar = () => {
     // ref를 사용하면 컴포넌트의 상태와 상관없이 DOM요소에 직접 접근 할 수 있기 때문에
     // 특정 DOM 요소의 값을 읽어오거나 변경하는 등의 작업에 유용함!

@@ -1,5 +1,4 @@
 import './NoticeDetail.css';
-import axios from 'axios';
 import { useState } from 'react';   
 import { Link } from 'react-router-dom';
 
@@ -39,7 +38,7 @@ export default function Page(){
                 {data.content}
             </div>
             <Divider />
-            <Link to={"/Notice"}>목록</Link>
+            <Link className="notice_detail_listbtn" to={"/Notice"}>목록</Link>
         </main>
     );
 }

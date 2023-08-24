@@ -1,6 +1,7 @@
 // ReplyItem.js
 
 import './ReplyItem.css';
+import Pagination from '../../lib/Pagination';
 
 // 댓글을 생성하는 function
 function ReplyItem({ thumb, name, content, createdAt }) {

@@ -2,19 +2,19 @@ import React from 'react';
 import ReactPaginate from 'react-paginate';
 import './Pagination.css';
 
-const Pagination = ({ pageCount, handlePageChange }) => {
+const Pagination = ({ pageCount, onPageChange }) => {
   
   return (
     <div>
       {/* 페이징 컴포넌트 추가 */}
       <ReactPaginate
         pageCount={pageCount}  // 전체 페이지 수
-        pageRangeDisplayed={2}
-        marginPagesDisplayed={1}
-        breakLabel="..."
-        nextLabel={<Next />}
-        previousLabel={<Prev />}
-        onPageChange={handlePageChange}  // 페이지 변경 처리 함수
+        pageRangeDisplayed={2} // 한 페이지에 표시할 게시글의 수
+        marginPagesDisplayed={1} // 여백에 표시할 페이지 수
+        breakLabel="..." // 페이지 수가 많을 경우 건너뛸 수 있는 버튼
+        nextLabel={<Next />} // 다음 페이지로 가는 버튼의 value 값
+        previousLabel={<Prev />} // 이전 페이지로 가는 버튼의 value 값
+        onPageChange={onPageChange}  // 페이지 변경 처리 함수
         className="paginate"
         pageClassName="page-item"
         previousClassName="page-item"
@@ -63,4 +63,4 @@ function Prev() {
   );
 }
 
-export default Pagination
+export default Pagination;
