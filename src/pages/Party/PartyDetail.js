@@ -1,5 +1,7 @@
 import ReactPaginate from 'react-paginate';
 import './PartyDetail.css';
+import ReplyItem from '../../component/ReplyItem/ReplyItem';
+import Pagination from '../../lib/Pagination';
 
 // 백엔드와 연동할 데이터 모음
 const data = {
@@ -168,29 +170,8 @@ export default function Page(){
                 {data.reply.map((item, index)=> (
                     <ReplyItem key={index} {...item} />
                 ))}
-                {/* 페이징 처리 */}
-                <ReactPaginate
-                    // 총 게시글의 수
-                    pageCount={5}
-                    // 한 페이지에 표시할 게시글 수
-                    pageRangeDisplayed={3}
-                    marginPagesDisplayed={1}
-                    // 페이지 수가 많을 경우 건너뛸 수 있는 버튼
-                    breakLabel="..."
-                    // 다음 페이지로 가는 버튼의 value
-                    nextLabel={<Next />}
-                    // 이전 페이지로 가는 버튼의 value
-                    previousLabel={<Prev />}
-                    className="paginate"
-                    pageClassName="page-item"
-                    // 이전 버튼 css 적용을 위한 className
-                    previousClassName="page-item"
-                    // 다음 버튼 css 적용을 위한 className
-                    nextClassName="page-item"
-                    pageLinkClassName="page-link"
-                    previousLinkClassName="np"
-                    nextLinkClassName="np"
-                />
+
+                <Pagination />
             </div>
         </main>
     );
@@ -200,58 +181,3 @@ export default function Page(){
 function Divider() {
     return <div className="party_detail_divider" />;
 }
-
-// 댓글을 생성하는 function
-function ReplyItem({thumb, name, content, createdAt}){
-    return(
-        <div className="party_detail_reply_item">
-            <div className="image_container">
-                <img src={thumb} alt="reply thumb" />
-            </div>
-            <div>
-                <div className="insight">
-                    <span>{name}</span>
-                    <span>{createdAt}</span>
-                    <span>답글</span>
-                </div>
-                <p>{content}</p>
-            </div>
-        </div>
-    );
-}
-
-// 페이징 처리에서 next function
-function Next() {
-    return (
-      <svg
-        width="48"
-        height="48"
-        viewBox="0 0 48 48"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="#909090"
-          d="M15.8 43.9L13 41.05L30.15 23.9L13 6.75002L15.8 3.90002L35.8 23.9L15.8 43.9Z"
-        />
-      </svg>
-    );
-  }
-  
-  // 페이징 처리에서 prev function
-  function Prev() {
-    return (
-      <svg
-        width="48"
-        height="48"
-        viewBox="0 0 48 48"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="#909090"
-          d="M33 44L13 24L33 4L35.8 6.85L18.65 24L35.8 41.15L33 44Z"
-        />
-      </svg>
-    );
-  }

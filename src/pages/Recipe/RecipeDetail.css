@@ -162,10 +162,6 @@
 }
 
 .recipe_detail_user > button {
-  display: flex;
-  align-items: center;
-  /* 자식 요소들 간 간격 조정 */
-  gap: 4px;
   background-color: transparent;
   background-color: #666666;
   border: none;
@@ -173,6 +169,13 @@
   padding: 4px 14px;
   border-radius: 30px;
   font-size: 12px;
+}
+
+.recipe_detail_user > button > span {
+  display: flex;
+  align-items: center;
+  /* 자식 요소들 간 간격 조정 */
+  gap: 4px;
 }
 
 .recipe_detail_user > button > span > svg {
@@ -215,13 +218,15 @@
   outline: none;
 }
 
-.recipe_detail_reply > .input > span {
+.recipe_detail_reply > .input > button {
   position: absolute;
-  top: 13px;
-  right: 16px;
+  background-color: #ffffff;
+  border: none;
+  top: 15px; right: 16px;
+  font-size: 16px;
 }
 
-.recipe_detail_reply_item {
+/* .recipe_detail_reply_item {
   margin-top: 30px;
   display: flex;
   gap: 38px;
@@ -258,7 +263,7 @@
   white-space: pre-line;
   margin: 0;
   margin-top: 8px;
-}
+} */
 
 .recipe_detail_divider {
   width: 100%;
@@ -266,6 +271,7 @@
   background-color: #adadad;
 }
 
+/* 
 .paginate {
   margin-top: 50px;
   width: 100%;
@@ -310,4 +316,5 @@
   display: block;
   width: 16px;
   height: 16px;
-}
+} 
+*/
