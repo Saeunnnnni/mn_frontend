@@ -13,7 +13,7 @@ function MainPage() {
           <Banner className="image" />
         </div>
 
-        <div className='board-title'>지금 <span style={{color:"#ff6a10"}} >핫🔥한 </span>레시피</div>
+      <div className='board-title'>지금 <span style={{ color: "#ff6a10" }} >핫🔥한 </span>레시피</div>      
         <MainRecipeCardList />
         
         <div className='board-title'>Today <span style={{ color: "#ff6a10" }} >레시피 </span></div>
