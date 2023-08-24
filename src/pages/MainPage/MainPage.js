@@ -3,6 +3,7 @@ import "./MainPage.css";
 import Banner from "../../component/Banner/Banner";
 import CardList from "../../component/CardList/RecipeCardList";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   const [recipeCards, setRecipeCards] = useState([]);
@@ -31,7 +32,6 @@ function MainPage() {
   return (
     <div className="container">
       <div className="imgWrapper">
-        <Link to="/mypage">마이페이지</Link>
         <Banner className="image" />
       </div>
       <div className="board-title">

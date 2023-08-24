@@ -35,7 +35,7 @@ const ProfileEdit = () => {
         });
     } else {
       // 로그인되지 않은 상태를 처리하는 로직 (예: 로그인 페이지로 리디렉션)
-      navigate("/login");
+      //      navigate("/login");
     }
   }, []);
 
@@ -196,9 +196,7 @@ const ProfileEdit = () => {
           비밀번호 변경
         </button>
       </form>
-      
     </div>
-    
   );
 };
 

@@ -10,9 +10,9 @@ import Party from "./pages/Party/PartyDetail.js";
 import Login from "./pages/Login/Login.js";
 import Signup from "./pages/Signup/Signup.js";
 import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
-import MyPage from "./pages/Mypage/Mypage.js";
 import RecipeList from "./pages/Recipe/RecipeList.jsx";
 import PartyList from "./pages/Party/PartyList.jsx";
+import MyPage from "./pages/MyPage/MyPage.js";
 
 function App() {
   return (
@@ -23,14 +23,13 @@ function App() {
         <Route path="/notice" element={<Notice />} />
         <Route path="/recipe" element={<Recipe />} />
         <Route path="/party" element={<Party />} />
-        <Route path="/mypage" element={<Mypage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/recipeDetail" element={<RecipeDetail />} />
-        <Route path="/mypage" element={<MyPage />} />
         <Route path="/recipeList" element={<RecipeList />} />
         <Route path="/partyList" element={<PartyList />} />
+        <Route path="/mypage" element={<MyPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

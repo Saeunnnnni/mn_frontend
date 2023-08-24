@@ -11,23 +11,23 @@ const Profile = () => {
     profileImage: null, // 기본 프로필 이미지 경로
   });
 
-  // 백엔드에서 프로필 데이터를 가져오는 함수
-  const UsersProfileData = () => {
-    axios
-      .get("/api/usersData") // 백엔드 API 엔드포인트를 사용하세요.
-      .then((response) => {
-        // 백엔드에서 받아온 프로필 데이터를 설정합니다.
-        setProfileData(response.data);
-      })
-      .catch((error) => {
-        console.error("프로필 데이터 가져오기 실패:", error);
-      });
-  };
+  // // 백엔드에서 프로필 데이터를 가져오는 함수
+  // const UsersProfileData = () => {
+  //   axios
+  //     .get("/api/usersData") // 백엔드 API 엔드포인트를 사용하세요.
+  //     .then((response) => {
+  //       // 백엔드에서 받아온 프로필 데이터를 설정합니다.
+  //       setProfileData(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("프로필 데이터 가져오기 실패:", error);
+  //     });
+  // };
 
-  useEffect(() => {
-    // 컴포넌트가 마운트될 때 프로필 데이터를 가져옵니다.
-    UsersProfileData();
-  }, []); // 빈 배열을 전달하여 한 번만 호출되도록 설정
+  // useEffect(() => {
+  //   // 컴포넌트가 마운트될 때 프로필 데이터를 가져옵니다.
+  //   UsersProfileData();
+  // }, []); // 빈 배열을 전달하여 한 번만 호출되도록 설정
 
   return (
     <div className="profile-container">
