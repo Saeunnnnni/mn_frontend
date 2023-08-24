@@ -14,7 +14,7 @@ const SearchBar = () => {
         const  searchText = inputRef.current.value;
          // ref를 이용해 검색어를 가져온다
         if(searchText){
-            axios.get(`http://localhost:5000/recipes?query=${searchText}`)
+            axios.get(`http://localhost:5000/recipe?query=${searchText}`)
                 .then((response) => {
                     // 검색 결과에 따라 페이지를 전환합니다.
                     if (response.data.length > 0) {

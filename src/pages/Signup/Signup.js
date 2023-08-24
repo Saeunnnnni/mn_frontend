@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false); // 이메일 중복 확인 결과
   const [password, setPassword] = useState("");
@@ -20,54 +22,71 @@ const Signup = () => {
   });
 
   // DB로 회원가입 정보 보내기
-  const handleSignup = async () => {
+  const handleSignup = async (e) => {
+    e.preventDefault();
     if (password !== confirmPassword) {
       setPasswordError("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
       return;
     }
     setPasswordError(""); // 일치하면 에러 메시지 초기화
 
-    // 실제 로그인 요청 처리 (axios를 사용하여 백엔드 API 호출)
-    const response = axios
-      .post("member/insert", {
+    try {
+      const response = await axios.post("auth/signup", {
         userEmail: email,
-        userPwd: password,
-        userNickName: nickname,
-      })
-      .then(function (response) {
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.error("로그인 오류:", error);
+        userPassword: password,
+        userNickname: nickname,
+        petTypeIds: withAnimals,
       });
-    console.log(response.data);
-    console.log(email);
-    console.log(password);
-    console.log(nickname);
-  };
-
-  // DB로 이메일 정보 보내기
-  const handleEmailCheck = async () => {
-    // 이메일 일치여부 확인 (axios를 사용하여 백엔드 API 호출)
-    const response = axios
-      .post("/user/checkEmail", {
-        userEmail: email,
-      })
-      .catch(function (error) {
-        console.error("이메일 중복확인 오류:", error);
-      });
-    if (response.data.exists) {
-      setIsEmailValid(false); // 중복된 이메일
-    } else {
-      setIsEmailValid(true); // 중복되지 않은 이메일
+      console.log("성공!");
+      // 회원가입 성공 후 로그인 페이지로 이동
+      navigate("/login");
+    } catch (error) {
+      console.error("회원가입 오류:", error);
+      alert("회원가입 불가");
     }
   };
 
+  // DB로 이메일 정보 보내기
+  const handleEmailCheck = async (e) => {
+    e.preventDefault();
+    try {
+      // 이메일 일치 여부 확인 (axios를 사용하여 백엔드 API 호출)
+      const response = await axios.get("/auth/check-email", {
+        params: {
+          userEmail: email,
+        },
+      });
+
+      console.log(response);
+
+      if (response.data === "Duplicated") {
+        setIsEmailValid(false); // 중복된 이메일
+        alert("사용할 수 없는 이메일입니다!");
+      } else {
+        setIsEmailValid(true); // 중복되지 않은 이메일
+        alert("사용할 수 있는 이메일입니다!");
+      }
+    } catch (error) {
+      console.error("이메일 중복확인 오류:", error);
+    }
+  };
+
+  const ANIMAL_MAPPING = {
+    반려견: 1,
+    반려묘: 2,
+    반려햄: 3,
+    반려조: 4,
+    기타: 5,
+    없음: 6,
+  };
+
   const handleWithAnimalChange = (animal) => {
-    if (withAnimals.includes(animal)) {
-      setWithAnimals(withAnimals.filter((item) => item !== animal));
+    const value = ANIMAL_MAPPING[animal];
+
+    if (withAnimals.includes(value)) {
+      setWithAnimals(withAnimals.filter((item) => item !== value));
     } else {
-      setWithAnimals((prevWithAnimals) => [...prevWithAnimals, animal]);
+      setWithAnimals([...withAnimals, value]);
     }
   };
 
@@ -118,13 +137,13 @@ const Signup = () => {
         <button className="emailCheck-button" onClick={handleEmailCheck}>
           이메일 중복확인
         </button>
-        {/* 
+
         {isEmailValid ? (
           <span style={{ color: "green" }}>사용 가능한 이메일입니다.</span>
         ) : (
           <span style={{ color: "red" }}>중복된 이메일입니다.</span>
         )}
-        */}
+
         <label>비밀번호</label>
         <span className="signup-span">
           영문,숫자를 포함한 8자이상의 비밀번호를 입력해주세요
@@ -162,7 +181,6 @@ const Signup = () => {
             <label>
               <input
                 type="checkbox"
-                checked={withAnimals.includes("반려견")}
                 onChange={() => handleWithAnimalChange("반려견")}
               />
               반려견
@@ -170,7 +188,6 @@ const Signup = () => {
             <label>
               <input
                 type="checkbox"
-                checked={withAnimals.includes("반려묘")}
                 onChange={() => handleWithAnimalChange("반려묘")}
               />
               반려묘
@@ -178,7 +195,6 @@ const Signup = () => {
             <label>
               <input
                 type="checkbox"
-                checked={withAnimals.includes("반려햄")}
                 onChange={() => handleWithAnimalChange("반려햄")}
               />
               반려햄
@@ -186,7 +202,6 @@ const Signup = () => {
             <label>
               <input
                 type="checkbox"
-                checked={withAnimals.includes("반려조")}
                 onChange={() => handleWithAnimalChange("반려조")}
               />
               반려조
@@ -194,7 +209,6 @@ const Signup = () => {
             <label>
               <input
                 type="checkbox"
-                checked={withAnimals.includes("기타")}
                 onChange={() => handleWithAnimalChange("기타")}
               />
               기타
@@ -202,7 +216,6 @@ const Signup = () => {
             <label>
               <input
                 type="checkbox"
-                checked={withAnimals.includes("없음")}
                 onChange={() => handleWithAnimalChange("없음")}
               />
               없음

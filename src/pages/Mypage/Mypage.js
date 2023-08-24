@@ -1,16 +1,16 @@
 import React from "react";
-import Header from "../../component/Header/Header";
-import MypageNav from "../../component/MypageNav/MypageNav";
+import MyPageNav from "../../component/MyPageNav/MyPageNav";
 import Profile from "../../component/Profile/Profile";
 import ProfileEdit from "../../component/ProfileEdit/ProfileEdit";
 import "./MyPage.css"; // 위에서 작성한 CSS 파일을 임포트하고 있다고 가정합니다.
 
-const Mypage = () => {
+const MyPage = () => {
   return (
     <div>
       <hr />
-      <MypageNav />
+      <MyPageNav />
       <hr />
+
       <div className="mypage-content container">
         <Profile />
         <ProfileEdit />
@@ -19,4 +19,4 @@ const Mypage = () => {
   );
 };
 
-export default Mypage;
+export default MyPage;

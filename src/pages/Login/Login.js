@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css"; // 기존 스타일 파일 임포트
 import axios from "axios";
 
@@ -8,6 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const navigate = useNavigate();
 
   // 이메일, 패스워드 정규식 표현
   const emailRegEx =
@@ -26,7 +27,9 @@ const Login = () => {
     }
   };
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
     if (!emailCheck(email)) {
       setEmailError("올바른 이메일 형식이 아닙니다.");
       return;
@@ -39,18 +42,18 @@ const Login = () => {
 
     try {
       // 실제 로그인 요청 처리 (axios를 사용하여 백엔드 API 호출)
-      const response = await axios.post("http://localhost:9999/login", {
+      const response = await axios.post("/auth/signin", {
         userEmail: email,
-        userPwd: password,
+        userPassword: password,
       });
 
-      if (response.data.success) {
-        alert("로그인 성공");
+      if (response.data.token) {
+        alert("로그인되었습니다!");
+        navigate("/");
         // 로그인 성공 후 처리할 작업 추가
-      } else {
-        alert("로그인 실패");
       }
     } catch (error) {
+      alert("로그인 실패!");
       console.error("로그인 오류:", error);
     }
   };
@@ -72,11 +75,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <form className="login-form">
-        <img
-          src="images/mnLogo04.png"
-          alt="mnLogo01"
-          className="login-logo"
-        />
+        <img src="images/mnLogo04.png" alt="mnLogo01" className="login-logo" />
         <input
           type="text"
           placeholder="이메일"
@@ -95,7 +94,9 @@ const Login = () => {
           로그인
         </button>
         <div className="login-links">
-          <Link to="/ResetPwd" className="reset">비밀번호 재설정</Link>
+          <Link to="/ResetPwd" className="reset">
+            비밀번호 재설정
+          </Link>
           <Link to="/Signup">회원가입하기</Link>
         </div>
       </form>
