@@ -1,11 +1,12 @@
 // RecipeDetail.js
 import "./RecipeDetail.css";
-import ReactPaginate from "react-paginate"; 
+import ReplyItem from "../../component/ReplyItem/ReplyItem";
+import Pagination from "../../lib/Pagination";
+import { useState, useEffect, useRef } from "react";
+import axios from "axios";
+
 //import { useParams } from 'react-router-dom';   //id값을 전달하기 위한 params
-
-
 //const { id } = useParams(); // URL 파라미터에서 id 추출
-
 // 백엔드와 연동할 데이터 모음
 const data = {
   mainImg:
@@ -34,27 +35,61 @@ const data = {
   user: {
     thumb: "https://randomuser.me/api/portraits/med/men/52.jpg",
     name: "블루베리",
-  },
-  reply: [
-    {
-      thumb: "https://randomuser.me/api/portraits/med/men/50.jpg",
-      name: "Bruuuiu",
-      content:
-        "강아지가 너무 좋아해요ㅠㅠ 이렇게 간편하게 만들 수 있나니...\n작성님 항상 건강하시구 행복한 하루되세요!",
-      createdAt: "2023.07.25",
-    },
-    {
-      thumb: "https://randomuser.me/api/portraits/med/men/49.jpg",
-      name: "aaaaaaa",
-      content:
-        "가슴이 웅장해진다..\n요리 못하는 저에게는 큰 빛, 구원...\n내일 꼭 해먹어여 보겠습니다 ㅋㅋ\n구독하러 갈게요 ㅎㅎ",
-      createdAt: "2023.07.25",
-    },
-  ],
+  }
 };
 
 // 페이지 로딩 시 출력되는 화면내용
 export default function Page() {
+
+    let inputReply = useRef();
+
+    const [isFollowing, setIsFollowing] = useState(false);
+
+    const [reply, setReply] = useState([]);
+     //초기값을 빈 배열로 설정
+    
+    const [currentPage, setCurrentPage] = useState(0);
+    // 페이징 처리에 관련한 로직 및 상태 추가
+
+    const [totalReplyCount, setTotalReplyCount] = useState(0);
+    //전체 댓글의 개수를 표시
+
+    const replyPerPage = 6;
+    //한 페이지에 표시할 댓글의 수를 정의 
+    // 추가
+
+    const getReply = ()=>{
+      axios.get('http://localhost:5000/reply')
+      .then(response => {
+        setReply(response.data);
+        console.log(response.data);
+        setTotalReplyCount(response.data.length); // 레시피 개수 설정
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    }
+
+    useEffect(() => { 
+        getReply();
+    }, [])
+    //axios로 json데이터 가져오기    
+ 
+
+    //현재 페이지에 표시 되어야 할 카드의 시작 위치 계산 
+    //현재 페이지 * 한페이지에 표시할 카드 수 =  시작위치
+    const offset = currentPage * replyPerPage;
+
+    //현재 페이지에 표시되어야 할 카드들의 배열 구성 
+    //cards 배열에서 offset ~ offeset+cardsperPages범위를 슬라이스해서 현재 페이지에 가져온다.
+    const currentReply = reply.slice(offset, offset + replyPerPage);
+
+     //페이지 변경을 처리하며, 현재 페이지에 맞게 표시할 카드들을 슬라이스하여 렌더링하는 함수 
+     const handlePageChange = ({ selected }) => {        
+        setCurrentPage(selected);
+        console.log(setCurrentPage)
+    };
+
   return (
     <main className="recipe_detail_main">
       <div className="recipe_detail_image_container">
@@ -119,28 +154,19 @@ export default function Page() {
           {/* 작성자 닉네임 */}
           <div className="title">{data.user.name}</div>
           {/* 팔로우 버튼 */}
-          <button>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="16"
-                viewBox="0 -960 960 960"
-                width="16"
-              >
-                <path
-                  fill="#f4f4f4"
-                  d="M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"
-                />
-              </svg>
-            </span>
-            팔로우
+          <button 
+            style={{backgroundColor: isFollowing ? '#ff6a10' : '#ba7149'}} 
+            onClick={()=>{
+              setIsFollowing(!isFollowing);
+            }}>
+            {isFollowing ? <Following /> : <Follow />}
           </button>
         </div>
       </div>
       <Divider />
       <div className="recipe_detail_reply">
         {/* 총 댓글 수 표시 */}
-        <div className="title">댓글 {data.reply.length}</div>
+        <div className="title">댓글 {totalReplyCount}</div>
         {/* 댓글 입력 창 */}
         <div className="input">
           <div>
@@ -149,36 +175,32 @@ export default function Page() {
               alt="user thumb"
             />
           </div>
-          <input />
-          <span>등록</span>
+          {/* 댓글 입력 시 댓글 목록에 추가되도록 기능 구현 */}
+          <input ref={inputReply} type="text" />
+          <button onClick={(e)=>{
+            const content = inputReply.current.value;
+            axios.post("http://localhost:5000/reply", {
+              thumb: "https://randomuser.me/api/portraits/med/men/49.jpg",
+              name: "abcde",
+              content,
+              createdAt: "2023.08.24"
+            })
+            .then((res)=>{
+              console.log(res.data);
+              getReply();
+            })
+            .catch((error)=>{
+              console.log(error);
+            });
+          }}>등록</button>
         </div>
         {/* 등록된 댓글 나열 */}
-        {data.reply.map((item, index) => (
+        {currentReply.map((item, index) => (
           <ReplyItem key={index} {...item} />
         ))}
-        {/* 페이징 처리 */}
-        <ReactPaginate
-          // 총 게시글의 수
-          pageCount={5}
-          // 한 페이지에 표시할 게시글 수
-          pageRangeDisplayed={3}
-          marginPagesDisplayed={1}
-          // 페이지 수가 많을 경우 건너뛸 수 있는 버튼
-          breakLabel="..."
-          // 다음 페이지로 가는 버튼의 value
-          nextLabel={<Next />}
-          // 이전 페이지로 가는 버튼의 value
-          previousLabel={<Prev />}
-          className="paginate"
-          pageClassName="page-item"
-          // 이전 버튼 css 적용을 위한 className
-          previousClassName="page-item"
-          // 다음 버튼 css 적용을 위한 className
-          nextClassName="page-item"
-          pageLinkClassName="page-link"
-          previousLinkClassName="np"
-          nextLinkClassName="np"
-        />
+
+        <Pagination pageCount={Math.ceil(reply.length / replyPerPage)} onPageChange={handlePageChange} />
+
       </div>
     </main>
   );
@@ -206,57 +228,44 @@ function StepItem({ desc, img, ingre }) {
   );
 }
 
-// 댓글을 생성하는 function
-function ReplyItem({ thumb, name, content, createdAt }) {
-  return (
-    <div className="recipe_detail_reply_item">
-      <div className="image_container">
-        <img src={thumb} alt="reply thumb" />
-      </div>
-      <div>
-        <div className="insight">
-          <span>{name}</span>
-          <span>{createdAt}</span>
-          <span>답글</span>
-        </div>
-        <p>{content}</p>
-      </div>
-    </div>
-  );
+function Follow(){
+  return(
+    // 팔로잉 하지 않을 때 활성화되는 버튼
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          viewBox="0 -960 960 960"
+          width="16"
+        >
+          <path
+            fill="#f4f4f4"
+            d="M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"
+          />
+        </svg>
+        팔로우
+      </span>
+  )
 }
 
-// 페이징 처리에서 next function
-function Next() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="#909090"
-        d="M15.8 43.9L13 41.05L30.15 23.9L13 6.75002L15.8 3.90002L35.8 23.9L15.8 43.9Z"
-      />
-    </svg>
-  );
-}
-
-// 페이징 처리에서 prev function
-function Prev() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="#909090"
-        d="M33 44L13 24L33 4L35.8 6.85L18.65 24L35.8 41.15L33 44Z"
-      />
-    </svg>
-  );
+function Following(){
+  return(
+    // 팔로잉 클릭 시 활성화되는 버튼 
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px" 
+          width="16" 
+          height="16" 
+          viewBox="0 0 30 30"
+        >
+          <path
+            fill="#f4f4f4"
+            d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+          />
+        </svg>
+        팔로잉
+      </span>
+  )
 }

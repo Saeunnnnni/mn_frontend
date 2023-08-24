@@ -9,9 +9,9 @@ const NoticeBoard = ({ user}) => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     // user 정보에 따라 관리자 여부 확인
-    if (user && user.role === 'admin') {
-        setIsAdmin(true);
-    }
+    // if (user && user.role === 'admin') {
+    //     setIsAdmin(true);
+    // }
       
         useEffect(() => {
           axios.get('http://localhost:5000/posts')
