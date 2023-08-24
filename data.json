@@ -1,7 +1,7 @@
 {
   "recipe": [
     {
-      "num": 1,
+      "num": 0,
       "title": "아주 쉽고 맛있는 닭가슴살 샐러드",
       "level": "초급",
       "time": "20분",
@@ -12,8 +12,8 @@
       "likes": 50,
       "category": "반려견"
     },
-    {
-      "num": 2,
+    { 
+      "num": 1,
       "title": "상큼하고 달달해서 우리 강아지가 좋아하는 사과 시리얼 스낵",
       "level": "초급",
       "time": "15분",
@@ -24,8 +24,8 @@
       "likes": 20,
       "category": "반려견"
     },
-    {
-      "num": 3,
+    { 
+      "num": 2,
       "title": "고구마 쿠키",
       "level": "중급",
       "time": "30분",
@@ -36,8 +36,8 @@
       "likes": 30,
       "category": "반려조"
     },
-    {
-      "num": 4,
+    { 
+      "num": 3,
       "title": "양고기 스튜",
       "level": "중급",
       "time": "40분",
@@ -48,8 +48,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 5,
+    { 
+      "num": 4,
       "title": "연어 스틱",
       "level": "고급",
       "time": "25분",
@@ -60,8 +60,8 @@
       "likes": 0,
       "category": "반려조"
     },
-    {
-      "num": 6,
+    { 
+      "num": 5,
       "title": "닭가슴살 구이",
       "level": "중급",
       "time": "30분",
@@ -72,8 +72,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 7,
+    { 
+      "num": 6,
       "title": "시금치 고구마 볼",
       "level": "초급",
       "time": "15분",
@@ -84,8 +84,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 8,
+    { 
+      "num": 7,
       "title": "바나나 스무디",
       "level": "초급",
       "time": "10분",
@@ -96,8 +96,8 @@
       "likes": 0,
       "category": "기타"
     },
-    {
-      "num": 9,
+    { 
+      "num": 8,
       "title": "사과 치즈 볼",
       "level": "중급",
       "time": "20분",
@@ -108,8 +108,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 10,
+    { 
+      "num": 9,
       "title": "양파링",
       "level": "초급",
       "time": "15분",
@@ -120,7 +120,19 @@
       "likes": 0,
       "category": "기타"
     },
-    {
+    { 
+      "num": 10,
+      "title": "아주 쉽고 맛있는 닭가슴살 샐러드",
+      "level": "초급",
+      "time": "20분",
+      "writer": "petlover123",
+      "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
+      "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
+      "main_image_url": "http://localhost:3000/images/recipe01.jpg",
+      "likes": 50,
+      "category": "반려견"
+    },
+    { 
       "num": 11,
       "title": "맛있는 닭가슴살 베이크",
       "level": "중급",
@@ -132,7 +144,7 @@
       "likes": 11,
       "category": "반려햄"
     },
-    {
+    { 
       "num": 12,
       "title": "간편한 치킨 너겟",
       "level": "초급",
@@ -144,7 +156,7 @@
       "likes": 5,
       "category": "반려묘"
     },
-    {
+    { 
       "num": 13,
       "title": "간편한 오트밀 머핀",
       "level": "초급",
@@ -156,7 +168,7 @@
       "likes": 15,
       "category": "반려견"
     },
-    {
+    { 
       "num": 14,
       "title": "사과 바나나 요거트 스무디",
       "level": "초급",
@@ -168,20 +180,9 @@
       "likes": 8,
       "category": "반려묘"
     },
-    {
-      "num": 1,
-      "title": "아주 쉽고 맛있는 닭가슴살 샐러드",
-      "level": "초급",
-      "time": "20분",
-      "writer": "petlover123",
-      "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
-      "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
-      "main_image_url": "http://localhost:3000/images/recipe01.jpg",
-      "likes": 50,
-      "category": "반려견"
-    },
-    {
-      "num": 2,
+   
+    { 
+      "num": 15,
       "title": "상큼하고 달달해서 우리 강아지가 좋아하는 사과 시리얼 스낵",
       "level": "초급",
       "time": "15분",
@@ -192,8 +193,8 @@
       "likes": 20,
       "category": "반려견"
     },
-    {
-      "num": 3,
+    { 
+      "num": 16,
       "title": "고구마 쿠키",
       "level": "중급",
       "time": "30분",
@@ -204,8 +205,8 @@
       "likes": 30,
       "category": "반려조"
     },
-    {
-      "num": 4,
+    { 
+      "num": 17,
       "title": "양고기 스튜",
       "level": "중급",
       "time": "40분",
@@ -216,8 +217,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 5,
+    { 
+      "num": 18,
       "title": "연어 스틱",
       "level": "고급",
       "time": "25분",
@@ -228,8 +229,8 @@
       "likes": 0,
       "category": "반려조"
     },
-    {
-      "num": 6,
+    { 
+      "num": 19,
       "title": "닭가슴살 구이",
       "level": "중급",
       "time": "30분",
@@ -240,8 +241,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 7,
+    { 
+      "num": 20,
       "title": "시금치 고구마 볼",
       "level": "초급",
       "time": "15분",
@@ -252,8 +253,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 8,
+    { 
+      "num": 21,
       "title": "바나나 스무디",
       "level": "초급",
       "time": "10분",
@@ -264,8 +265,8 @@
       "likes": 0,
       "category": "기타"
     },
-    {
-      "num": 9,
+    { 
+      "num": 22,
       "title": "사과 치즈 볼",
       "level": "중급",
       "time": "20분",
@@ -276,8 +277,8 @@
       "likes": 0,
       "category": "반려견"
     },
-    {
-      "num": 10,
+    { 
+      "num": 23,
       "title": "양파링",
       "level": "초급",
       "time": "15분",
@@ -288,8 +289,8 @@
       "likes": 0,
       "category": "기타"
     },
-    {
-      "num": 11,
+    { 
+      "num": 24,
       "title": "맛있는 닭가슴살 베이크",
       "level": "중급",
       "time": "35분",
@@ -300,8 +301,8 @@
       "likes": 11,
       "category": "반려햄"
     },
-    {
-      "num": 12,
+    { 
+      "num": 25,
       "title": "간편한 치킨 너겟",
       "level": "초급",
       "time": "25분",
@@ -312,8 +313,8 @@
       "likes": 5,
       "category": "반려묘"
     },
-    {
-      "num": 13,
+    { 
+      "num": 26,
       "title": "간편한 오트밀 머핀",
       "level": "초급",
       "time": "30분",
@@ -324,8 +325,8 @@
       "likes": 15,
       "category": "반려견"
     },
-    {
-      "num": 14,
+    { 
+      "num": 27,
       "title": "사과 바나나 요거트 스무디",
       "level": "초급",
       "time": "10분",

@@ -38,7 +38,7 @@ function Header() {
                 <Link to="/recipe">게시판</Link>
               </li>
               <li>
-                <Link to="/partyList">축하파티</Link>
+                <Link to="/party">축하파티</Link>
               </li>
             </ul>
           </nav>

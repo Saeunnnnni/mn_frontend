@@ -5,19 +5,14 @@ import MainImg from '../../component/MainImg/MainImg';
 import axios from 'axios';
 import SlickSlider from '../../lib/slickSlide'; 
 import { Arrow } from '../../lib/arrow'; 
-import RecipeList from './RecipeList';
+import BoardRecipeCardList from '../../component/CardList/BoardRecipeCardList';
   
 
-const RecipeBoard = ({ recipes }) => {
+const RecipeBoard = () => {
      /*json이 저장된 주소를 불러와서 변수에 담기 */
- const categoriesUrl = "http://localhost:5000/categories";    
- const recipeUrl = "http://localhost:5000/recipe";  
-  
-   const [cards, setCards] = useState([]); 
+ const categoriesUrl = "http://localhost:5000/categories";   
     /*게시판 카테고리 목록을 저장하고 각각의 배열에 담기게 초기값 설정 */
   const [categories, setCategories] = useState({ recipeBoardCategory: [], chefBoardCategory: [] });
-  
-  
     
     /*각각 카테고리목록을 axios로 불러오기 */
      useEffect(() => { 
@@ -25,19 +20,14 @@ const RecipeBoard = ({ recipes }) => {
         .then((Response) => {
             setCategories(Response.data)
             //console.log(Response.data)
-        }) 
-        axios.get(recipeUrl)
-        .then((Response) => {
-          setCards(Response.data)
-           // console.log(Response.data)
-        })
+        })   
         .catch((error) => {        
           console.error('Error fetching data:', error);
         });
     }, []) 
     
 
-    const chefSettings = {
+    const Settings = {
       infinite: false,
       speed: 500,
       slidesToShow: 7,
@@ -68,17 +58,14 @@ const RecipeBoard = ({ recipes }) => {
                 {/* chef list  + slider 적용 */}
                 <SlickSlider items={categories.chefBoardCategory.map((category, index) => (
                   <ImageCategory key={index} categories={[category]} />
-                ))} settings={chefSettings} /> 
+                ))} settings={Settings} /> 
 
-        
+             
               {/* 레시피  검색창 */}
                 <SearchBar />
-        
-              {/* 레시피 전체 리시트 출력됨 */}
-              <RecipeList/>
-
-
-  
+                  
+              {/* 레시피 전체 리스트 출력됨 */}
+              <BoardRecipeCardList/>
               </div>
       
         
@@ -95,9 +82,5 @@ const RecipeBoard = ({ recipes }) => {
     fontWeight: 'bold',
     
   };
-
-
-
-
 
 export default RecipeBoard;

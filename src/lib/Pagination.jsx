@@ -2,7 +2,8 @@ import React from 'react';
 import ReactPaginate from 'react-paginate';
 import './Pagination.css';
 
-const Pagination = ({ pageCount, handlePageChange }) => {
+const Pagination = ({ pageCount, onPageChange}) => {
+  
   
   return (
     <div>
@@ -14,7 +15,7 @@ const Pagination = ({ pageCount, handlePageChange }) => {
         breakLabel="..."
         nextLabel={<Next />}
         previousLabel={<Prev />}
-        onPageChange={handlePageChange}  // 페이지 변경 처리 함수
+        onPageChange={onPageChange}  // 페이지 변경 처리 함수
         className="paginate"
         pageClassName="page-item"
         previousClassName="page-item"
