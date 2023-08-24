@@ -21,4 +21,6 @@
     font-weight: bold;
 }
 
-
+.MainPage .card-img{
+  border-radius: 50%;
+}

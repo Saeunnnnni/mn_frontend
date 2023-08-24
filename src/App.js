@@ -3,16 +3,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage.js";
 import Header from "./component/Header/Header.js";
 import Footer from "./component/Footer/Footer.js";
-import RecipeDetail from "./pages/Recipe/RecipeDetail.js";
+import RecipeDetail from "./pages/Recipe/RecipeDetail.jsx";
 import Notice from "./pages/Notice/NoticeBoard.js";
-import Recipe from "./pages/Recipe/RecipeBoard.js";
-import Party from "./pages/Party/PartyDetail.js";
+import Recipe from "./pages/Recipe/RecipeBoard.jsx";
+import Party from "./pages/Party/PartyBoard.jsx";
 import Login from "./pages/Login/Login.js";
 import Signup from "./pages/Signup/Signup.js";
 import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
-import RecipeList from "./pages/Recipe/RecipeList.jsx";
-import PartyList from "./pages/Party/PartyList.jsx";
 import MyPage from "./pages/MyPage/MyPage.js";
+import PartyBoard from "./pages/Party/PartyBoard.jsx";
+import NoticeBoard from "./pages/Notice/NoticeBoard.js";
+import NoticeDetail from "./pages/Notice/NoticeDetail.js";
 
 function App() {
   return (
@@ -27,9 +28,10 @@ function App() {
         <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/recipeDetail" element={<RecipeDetail />} />
-        <Route path="/recipeList" element={<RecipeList />} />
-        <Route path="/partyList" element={<PartyList />} />
+        <Route path="/party" element={<PartyBoard />} />
         <Route path="/mypage" element={<MyPage />} />
+        <Route path="/notice" element={<NoticeBoard />}></Route>
+        <Route path="/noticeDetail" element={<NoticeDetail />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
