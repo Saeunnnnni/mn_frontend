@@ -2,7 +2,8 @@ import React from 'react';
 import ReactPaginate from 'react-paginate';
 import './Pagination.css';
 
-const Pagination = ({ pageCount, onPageChange }) => {
+
+const Pagination = ({ pageCount, onPageChange}) => {
   
   return (
     <div>

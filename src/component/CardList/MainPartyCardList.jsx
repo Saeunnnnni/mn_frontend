@@ -22,7 +22,7 @@ const RecipeCardList = () => {
     return (
         <div className="card-list">
             {Array.isArray(cards) && cards.slice(0,4).map((card, index) => (
-                <Card key={index} card={card} />
+                <Card key={index} card={card} showTitle={false}/>
             ))}
         </div>
         
