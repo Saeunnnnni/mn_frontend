@@ -28,4 +28,5 @@ npm i axios
  npm i @fortawesome/fontawesome-svg-core \
  npm i @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons \
  npm i @fortawesome/react-fontawesome
- 
+- React-Quill: rich-text editor \
+ npm install react-quill --save
