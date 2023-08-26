@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage.js";
@@ -30,10 +29,10 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/recipeDetail" element={<RecipeDetail />} />
         <Route path="/party" element={<PartyBoard />} />
-        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/MyPage" element={<MyPage />} />
         <Route path="/notice" element={<NoticeBoard />}></Route>
-        <Route path="/noticeDetail" element={<NoticeDetail/>}></Route>
-         {/*  <Route path="/recipes/:categoryName"  element={<CategoryList recipes={recipes}/>} /> */}
+        <Route path="/noticeDetail" element={<NoticeDetail />}></Route>
+        {/*  <Route path="/recipes/:categoryName"  element={<CategoryList recipes={recipes}/>} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
