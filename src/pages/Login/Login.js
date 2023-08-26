@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css"; // 기존 스타일 파일 임포트
 import axios from "axios";
@@ -46,6 +46,11 @@ const Login = () => {
         userEmail: email,
         userPassword: password,
       });
+      // 로컬스토리지에 token 값 저장
+      const token = response.data.token; // 응답 본문에서 토큰 추출
+      localStorage.setItem("login-token", token); // 토큰 저장
+
+      console.log(token);
 
       if (response.data.token) {
         alert("로그인되었습니다!");
