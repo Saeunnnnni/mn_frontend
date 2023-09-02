@@ -58,7 +58,7 @@ const RecipeCardList = () => {
                 ))}
                 </div>
                 <Pagination pageCount={Math.ceil(cards.length / cardsPerPage)} onPageChange={handlePageChange} />
-           
+                    {/* pagination 추가한 내용 */}
         </div>
     );
 };
