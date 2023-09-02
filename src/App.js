@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage.js";
@@ -11,7 +10,7 @@ import Party from "./pages/Party/PartyBoard.jsx";
 import Login from "./pages/Login/Login.js";
 import Signup from "./pages/Signup/Signup.js";
 import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
-import MyPage from "./pages/MyPage/MyPage.js";
+import MyPage from "./pages/Mypage/Mypage.js";
 import PartyBoard from "./pages/Party/PartyBoard.jsx";
 import NoticeBoard from "./pages/Notice/NoticeBoard.js";
 import NoticeDetail from "./pages/Notice/NoticeDetail.js";

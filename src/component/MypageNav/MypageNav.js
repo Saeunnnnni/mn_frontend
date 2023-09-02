@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import React from "react";
-import "./MyPageNav.css"; // CSS 파일 임포트
+import "./MypageNav.css"; // CSS 파일 임포트
 
 function MypageNav() {
   const location = useLocation();

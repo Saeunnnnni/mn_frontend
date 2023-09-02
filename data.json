@@ -17,7 +17,7 @@
       "likes": 50,
       "category": "반려견"
     },
-    { 
+    {
       "num": 1,
       "title": "상큼하고 달달해서 우리 강아지가 좋아하는 사과 시리얼 스낵",
       "level": "초급",
@@ -33,7 +33,7 @@
       "likes": 20,
       "category": "반려견"
     },
-    { 
+    {
       "num": 2,
       "title": "고구마 쿠키",
       "level": "중급",
@@ -50,7 +50,7 @@
       "likes": 30,
       "category": "반려조"
     },
-    { 
+    {
       "num": 3,
       "title": "양고기 스튜",
       "level": "중급",
@@ -67,7 +67,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 4,
       "title": "연어 스틱",
       "level": "고급",
@@ -84,7 +84,7 @@
       "likes": 0,
       "category": "반려조"
     },
-    { 
+    {
       "num": 5,
       "title": "닭가슴살 구이",
       "level": "중급",
@@ -101,7 +101,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 6,
       "title": "시금치 고구마 볼",
       "level": "초급",
@@ -118,7 +118,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 7,
       "title": "바나나 스무디",
       "level": "초급",
@@ -135,7 +135,7 @@
       "likes": 0,
       "category": "기타"
     },
-    { 
+    {
       "num": 8,
       "title": "사과 치즈 볼",
       "level": "중급",
@@ -152,7 +152,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 9,
       "title": "양파링",
       "level": "초급",
@@ -169,19 +169,24 @@
       "likes": 0,
       "category": "기타"
     },
-    { 
+    {
       "num": 10,
       "title": "아주 쉽고 맛있는 닭가슴살 샐러드",
       "level": "초급",
       "time": "20분",
       "writer": "petlover123",
-      "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
+      "ingredients": [
+        "닭가슴살",
+        "당근",
+        "브로콜리",
+        "양상추"
+      ],
       "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe01.jpg",
       "likes": 50,
       "category": "반려견"
     },
-    { 
+    {
       "num": 11,
       "title": "맛있는 닭가슴살 베이크",
       "level": "중급",
@@ -198,7 +203,7 @@
       "likes": 11,
       "category": "반려햄"
     },
-    { 
+    {
       "num": 12,
       "title": "간편한 치킨 너겟",
       "level": "초급",
@@ -215,7 +220,7 @@
       "likes": 5,
       "category": "반려묘"
     },
-    { 
+    {
       "num": 13,
       "title": "간편한 오트밀 머핀",
       "level": "초급",
@@ -232,7 +237,7 @@
       "likes": 15,
       "category": "반려견"
     },
-    { 
+    {
       "num": 14,
       "title": "사과 바나나 요거트 스무디",
       "level": "초급",
@@ -249,7 +254,7 @@
       "likes": 8,
       "category": "반려묘"
     },
-    { 
+    {
       "num": 15,
       "title": "상큼하고 달달해서 우리 강아지가 좋아하는 사과 시리얼 스낵",
       "level": "초급",
@@ -265,7 +270,7 @@
       "likes": 20,
       "category": "반려견"
     },
-    { 
+    {
       "num": 16,
       "title": "고구마 쿠키",
       "level": "중급",
@@ -282,7 +287,7 @@
       "likes": 30,
       "category": "반려조"
     },
-    { 
+    {
       "num": 17,
       "title": "양고기 스튜",
       "level": "중급",
@@ -299,7 +304,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 18,
       "title": "연어 스틱",
       "level": "고급",
@@ -316,7 +321,7 @@
       "likes": 0,
       "category": "반려조"
     },
-    { 
+    {
       "num": 19,
       "title": "닭가슴살 구이",
       "level": "중급",
@@ -333,7 +338,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 20,
       "title": "시금치 고구마 볼",
       "level": "초급",
@@ -350,7 +355,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 21,
       "title": "바나나 스무디",
       "level": "초급",
@@ -367,7 +372,7 @@
       "likes": 0,
       "category": "기타"
     },
-    { 
+    {
       "num": 22,
       "title": "사과 치즈 볼",
       "level": "중급",
@@ -384,7 +389,7 @@
       "likes": 0,
       "category": "반려견"
     },
-    { 
+    {
       "num": 23,
       "title": "양파링",
       "level": "초급",
@@ -401,7 +406,7 @@
       "likes": 0,
       "category": "기타"
     },
-    { 
+    {
       "num": 24,
       "title": "맛있는 닭가슴살 베이크",
       "level": "중급",
@@ -418,7 +423,7 @@
       "likes": 11,
       "category": "반려햄"
     },
-    { 
+    {
       "num": 25,
       "title": "간편한 치킨 너겟",
       "level": "초급",
@@ -435,7 +440,7 @@
       "likes": 5,
       "category": "반려묘"
     },
-    { 
+    {
       "num": 26,
       "title": "간편한 오트밀 머핀",
       "level": "초급",
@@ -452,7 +457,7 @@
       "likes": 15,
       "category": "반려견"
     },
-    { 
+    {
       "num": 27,
       "title": "사과 바나나 요거트 스무디",
       "level": "초급",
@@ -640,6 +645,34 @@
       "createdDate": "2023-06-03"
     }
   ],
+  "recipedetail": [
+    {
+      "rcpNum": 1,
+      "imageFile": "https://recipe1.ezmember.co.kr/cache/recipe/2019/08/21/f51404dc513ccc76be4b5668f5dd350b1.jpg",
+      "title": "쉽고 빠르게, 더운 여름에 만들어 먹기 좋은 강아지용 냉면",
+      "content": "나만 먹기 눈치 보일 때 ! 강아지도 같이 호로록 시원하게 먹고 싶을 때!\n콩물로 쉽고 건강하게 먹을 수 있는 반려견용 멍냉면을 만들어 볼까요 !  10분이면 요리 끝 !",
+      "servingSize": 1,
+      "cookingTime": 10,
+      "cookingLevel": "난이도 중",
+      "ingre": "콩국물 500ml, 소면 동전크기만큼, 오이 반절, 고명 간식 조금",
+      "step": [
+        {
+          "desc": "조리는 1번 사진부터 5번 사진 순서대로 진행됩니다.",
+          "img": "https://recipe1.ezmember.co.kr/cache/recipe/2023/08/09/a393d884c9710311dca36a5e0a9bc1dc1.jpg",
+          "ingre": "https://recipe1.ezmember.co.kr/cache/recipe/2016/06/14/60d56df3fea1b0502da32e68c2d8f5ee1.jpg"
+        }
+      ],
+      "insight": {
+        "like": 150,
+        "reply": 5,
+        "viewCount": 12500
+      },
+      "user": {
+        "thumb": "https://randomuser.me/api/portraits/med/men/52.jpg",
+        "writer": "블루베리"
+      }
+    }
+  ],
   "reply": [
     {
       "id": 1,
@@ -738,6 +771,27 @@
       "content": "zxcszxc",
       "createdAt": "2023.08.24",
       "id": 14
+    },
+    {
+      "thumb": "https://randomuser.me/api/portraits/med/men/49.jpg",
+      "name": "abcde",
+      "content": "djadja",
+      "createdAt": "2023.08.24",
+      "id": 15
+    },
+    {
+      "thumb": "https://randomuser.me/api/portraits/med/men/49.jpg",
+      "name": "abcde",
+      "content": "sad",
+      "createdAt": "2023.08.24",
+      "id": 16
+    },
+    {
+      "thumb": "https://randomuser.me/api/portraits/med/men/49.jpg",
+      "name": "abcde",
+      "content": "fdf",
+      "createdAt": "2023.08.24",
+      "id": 17
     }
   ]
 }
