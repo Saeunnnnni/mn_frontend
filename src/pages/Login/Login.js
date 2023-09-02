@@ -49,11 +49,17 @@ const Login = ({tokenChanged}) => {
       });
       // 로컬스토리지에 token 값 저장
       const token = response.data.token; // 응답 본문에서 토큰 추출
+<<<<<<< HEAD
       localStorage.setItem('login-token', token); // 토큰 저장
       const decodedToken = jwt_decode(token);
       console.log(decodedToken.roles);
       tokenChanged(token);
       console.log("토큰 변경됨");
+=======
+      localStorage.setItem("login-token", token); // 토큰 저장
+
+      console.log(token);
+>>>>>>> origin/lee
 
       if (decodedToken.roles) {
         // 백엔드에서 받은 역할(role) 확인
