@@ -14,6 +14,7 @@ import MyPage from "./pages/Mypage/Mypage.js";
 import PartyBoard from "./pages/Party/PartyBoard.jsx";
 import NoticeBoard from "./pages/Notice/NoticeBoard.js";
 import NoticeDetail from "./pages/Notice/NoticeDetail.js";
+import PartyWrite from "./pages/Party/PartyWrite.jsx";
 
 function App() {
   return (
@@ -29,10 +30,11 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/recipeDetail" element={<RecipeDetail />} />
         <Route path="/party" element={<PartyBoard />} />
-        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/MyPage" element={<MyPage />} />
         <Route path="/notice" element={<NoticeBoard />}></Route>
-        <Route path="/noticeDetail" element={<NoticeDetail/>}></Route>
-         {/*  <Route path="/recipes/:categoryName"  element={<CategoryList recipes={recipes}/>} /> */}
+        <Route path="/noticeDetail" element={<NoticeDetail />}></Route>
+        <Route path="/partyWrite" element={<PartyWrite />}></Route>
+        {/*  <Route path="/recipes/:categoryName"  element={<CategoryList recipes={recipes}/>} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
