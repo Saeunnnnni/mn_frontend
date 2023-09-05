@@ -3,9 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function Header({ currentToken, tokenChanged }) {
 =======
 function Header({currentToken}) {
+>>>>>>> upstream/lee
+=======
+function Header({currentToken, tokenChanged}) {
 >>>>>>> upstream/lee
   // public 폴더까지의 상대 경로 계산: 빌드 환경에 따라 사용하는 것이 좋습니다.
   const publicPath = process.env.PUBLIC_URL;
@@ -38,6 +42,7 @@ function Header({currentToken}) {
     alert("로그아웃되었습니다.");
 =======
     localStorage.removeItem('login-token');
+    tokenChanged(null);
     alert('로그아웃되었습니다.');
 >>>>>>> upstream/lee
   };
