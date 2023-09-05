@@ -4,7 +4,7 @@ import "./Login.css"; // 기존 스타일 파일 임포트
 import jwt_decode from "jwt-decode";
 import axios from "axios";
 
-const Login = ({tokenChanged}) => {
+const Login = ({ tokenChanged }) => {
   const [email, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -49,12 +49,10 @@ const Login = ({tokenChanged}) => {
       });
       // 로컬스토리지에 token 값 저장
       const token = response.data.token; // 응답 본문에서 토큰 추출
-      localStorage.setItem('login-token', token); // 토큰 저장
+      localStorage.setItem("login-token", token); // 토큰 저장
+      tokenChanged(token);
       const decodedToken = jwt_decode(token);
       console.log(decodedToken.roles);
-      tokenChanged(token);
-      console.log("토큰 변경됨");
-
       if (decodedToken.roles) {
         // 백엔드에서 받은 역할(role) 확인
         if (decodedToken.roles === "ADMIN") {

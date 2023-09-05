@@ -17,13 +17,19 @@ import Signup from "./pages/Signup/Signup.js";
 import MyPage from "./pages/MyPage/MyPage.js";
 import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
 
+import AdminPage from "./pages/AdminPage/AdminPage.jsx";
+import WithDrawal from "./pages/WithDrawal/WithDrawal.js";
+import ChangePwd from "./pages/ChangePwd/ChangePwd.js";
+import MyComment from "./pages/MyPage/MyComment.js";
+import MyContent from "./pages/MyPage/MyContent.js";
+
 function App() {
-  const [token, setToken] = useState(localStorage.getItem('login-token')); // token 상태 추가
+  const [token, setToken] = useState(localStorage.getItem("login-token")); // token 상태 추가
 
   const handleTokenChanged = (newToken) => {
-      console.log("새 토큰: " + newToken);
-      setToken(newToken);
-  }
+    console.log("새 토큰: " + newToken);
+    setToken(newToken);
+  };
 
   return (
     <BrowserRouter>
@@ -32,17 +38,25 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/noticeBoard" element={<NoticeBoard />}></Route>
         <Route path="/noticeDetail" element={<NoticeDetail />}></Route>
-        <Route path="/noticeWrite" element={<NoticeWrite/>}></Route>
+        <Route path="/noticeWrite" element={<NoticeWrite />}></Route>
         <Route path="/recipeBoard" element={<RecipeBoard />} />
         <Route path="/recipeDetail" element={<RecipeDetail />} />
         <Route path="/recipeWrite" element={<RecipeWrite />} />
         <Route path="/partyBoard" element={<PartyBoard />} />
         <Route path="/partyDetail" element={<PartyDetail />} />
-        <Route path="/partyWrite" element={<PartyWrite/>}></Route>
-        <Route path="/login" element={<Login tokenChanged={handleTokenChanged}/>} />
+        <Route path="/partyWrite" element={<PartyWrite />}></Route>
+        <Route
+          path="/login"
+          element={<Login tokenChanged={handleTokenChanged} />}
+        />
         <Route path="/signup" element={<Signup />} />
         <Route path="/MyPage" element={<MyPage />} />
         <Route path="/resetPwd" element={<ResetPwd />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/withDrawal" element={<WithDrawal />} />
+        <Route path="/changePwd" element={<ChangePwd />} />
+        <Route path="/myContent" element={<MyContent />} />
+        <Route path="/myComment" element={<MyComment />} />
       </Routes>
       <Footer />
     </BrowserRouter>

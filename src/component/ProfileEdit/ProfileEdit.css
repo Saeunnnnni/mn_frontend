@@ -169,8 +169,16 @@
 }
 
 .error {
+<<<<<<< HEAD
+  color: red;
+  margin-top: 10px;
+  margin-left: 130px;
+  margin-bottom: -30px;
+}
+=======
     color: red;
     margin-top: 10px;
     margin-left: 130px;
     margin-bottom: -30px;
 }
+>>>>>>> upstream/lee
