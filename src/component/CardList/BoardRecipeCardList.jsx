@@ -20,13 +20,13 @@ const RecipeCardList = () => {
     // 추가
 
     useEffect(() => { 
-        axios.get('http://localhost:5000/recipe')
+        axios.get('http://localhost:9999/recipe/list')
         .then(response => {
             setCards(response.data);
             setTotalRecipeCount(response.data.length); // 레시피 개수 설정
         })
         .catch(error => {
-           //console.error('Error fetching data:', error);
+           console.error('레시피 카드 리스트 Error fetching data:', error);
         });
     }, [])
    //axios로 json데이터 가져오기    

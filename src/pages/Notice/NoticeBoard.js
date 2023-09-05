@@ -16,7 +16,7 @@ const NoticeBoard = ({user}) => {
     const [totalPostCount, setTotalPostCount] = useState(0);
     //전체 글의 개수를 표시
 
-    const postPerPage = 5;
+    const postPerPage = 4;
     //한 페이지에 표시할 카드의 수를 정의
     // 추가
 
@@ -27,7 +27,7 @@ const NoticeBoard = ({user}) => {
     // }
       
         useEffect(() => {
-          axios.get('http://localhost:9999/api/posts')
+          axios.get('http://localhost:9999/notice/list')
             .then(response => {
               setPosts(response.data);
               setTotalPostCount(response.data.length);
@@ -67,7 +67,7 @@ const NoticeBoard = ({user}) => {
             <ul className="notice-list">
                 {Array.isArray(currentPosts) && currentPosts.map(post => (
                 <li className="notice-item" key={post.id}>
-                    <Link to="/noticeDetail" className='post-title'>{post.title}</Link>
+                    <Link to="/notice/{id}" className='post-title'>{post.title}</Link>
                       {/*    <p className='post-content'>{post.content}</p> */}
 
                       <p className='post-date'>{post.createdDate}</p>
