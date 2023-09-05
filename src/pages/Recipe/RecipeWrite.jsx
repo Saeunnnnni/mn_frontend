@@ -89,13 +89,17 @@ function RecipeWrite() {
             )}
           </label>
         </div>
+
         <div className="recipe-editor">
           {/* 
             component: react-quill Editor
             props: content, setContent
             => to pass data from child component(Editor) to parent component(NoticeWrite)
           */}
-          <Editor content={content} setContent={setContent}/>
+          <Editor 
+            setTitle={setTitle}
+            setContent={setContent}
+          />
           <div className="sub-container">
             <input
               type="file"
@@ -124,8 +128,8 @@ function RecipeWrite() {
           <div className="button-container">
             <button 
               className="submit-button"
-              // onClick={() => alert(content)}
-              onClick={handleUploadRecipe}
+              onClick={() => alert("제목: " + title + "\n" + "내용: " + content)}
+              // onClick={handleUploadRecipe}
             >
               작성
             </button>

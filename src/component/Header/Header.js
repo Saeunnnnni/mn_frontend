@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
-function Header({currentToken}) {
+function Header({currentToken, tokenChanged}) {
   // public 폴더까지의 상대 경로 계산: 빌드 환경에 따라 사용하는 것이 좋습니다.
   const publicPath = process.env.PUBLIC_URL;
   const [keyword, setKeyword] = useState("");
@@ -20,6 +20,7 @@ function Header({currentToken}) {
 
   const logout = () => {
     localStorage.removeItem('login-token');
+    tokenChanged(null);
     alert('로그아웃되었습니다.');
   };
 
