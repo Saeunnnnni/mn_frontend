@@ -1,40 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from "./pages/MainPage/MainPage.js";
 import Header from "./component/Header/Header.js";
 import Footer from "./component/Footer/Footer.js";
-import RecipeDetail from "./pages/Recipe/RecipeDetail.jsx";
-import Notice from "./pages/Notice/NoticeBoard.js";
-import Recipe from "./pages/Recipe/RecipeBoard.jsx";
-import Party from "./pages/Party/PartyBoard.jsx";
-import Login from "./pages/Login/Login.js";
-import Signup from "./pages/Signup/Signup.js";
-import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
-import MyPage from "./pages/MyPage/MyPage.js";
-import PartyBoard from "./pages/Party/PartyBoard.jsx";
+import MainPage from "./pages/MainPage/MainPage.js";
 import NoticeBoard from "./pages/Notice/NoticeBoard.js";
 import NoticeDetail from "./pages/Notice/NoticeDetail.js";
+import NoticeWrite from "./pages/Notice/NoticeWrite.jsx";
+import RecipeBoard from "./pages/Recipe/RecipeBoard.jsx";
+import RecipeDetail from "./pages/Recipe/RecipeDetail.jsx";
+import RecipeWrite from "./pages/Recipe/RecipeWrite.jsx";
+import PartyBoard from "./pages/Party/PartyBoard.jsx";
+import PartyDetail from "./pages/Party/PartyDetail.js";
 import PartyWrite from "./pages/Party/PartyWrite.jsx";
+import Login from "./pages/Login/Login.js";
+import Signup from "./pages/Signup/Signup.js";
+import MyPage from "./pages/MyPage/MyPage.js";
+import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
 
 function App() {
+  const [token, setToken] = useState(localStorage.getItem('login-token')); // token 상태 추가
+
+  const handleTokenChanged = (newToken) => {
+      console.log("새 토큰: " + newToken);
+      setToken(newToken);
+  }
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header currentToken={token} />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/notice" element={<Notice />} />
-        <Route path="/recipe" element={<Recipe />} />
-        <Route path="/party" element={<Party />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/resetPwd" element={<ResetPwd />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/recipeDetail" element={<RecipeDetail />} />
-        <Route path="/party" element={<PartyBoard />} />
-        <Route path="/MyPage" element={<MyPage />} />
-        <Route path="/notice" element={<NoticeBoard />}></Route>
+        <Route path="/noticeBoard" element={<NoticeBoard />}></Route>
         <Route path="/noticeDetail" element={<NoticeDetail />}></Route>
-        <Route path="/partyWrite" element={<PartyWrite />}></Route>
-        {/*  <Route path="/recipes/:categoryName"  element={<CategoryList recipes={recipes}/>} /> */}
+        <Route path="/noticeWrite" element={<NoticeWrite/>}></Route>
+        <Route path="/recipeBoard" element={<RecipeBoard />} />
+        <Route path="/recipeDetail" element={<RecipeDetail />} />
+        <Route path="/recipeWrite" element={<RecipeWrite />} />
+        <Route path="/partyBoard" element={<PartyBoard />} />
+        <Route path="/partyDetail" element={<PartyDetail />} />
+        <Route path="/partyWrite" element={<PartyWrite/>}></Route>
+        <Route path="/login" element={<Login tokenChanged={handleTokenChanged}/>} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/MyPage" element={<MyPage />} />
+        <Route path="/resetPwd" element={<ResetPwd />} />
       </Routes>
       <Footer />
     </BrowserRouter>
