@@ -16,6 +16,7 @@ import Login from "./pages/Login/Login.js";
 import Signup from "./pages/Signup/Signup.js";
 import MyPage from "./pages/MyPage/MyPage.js";
 import ResetPwd from "./pages/ResetPwd/ResetPwd.js";
+
 import AdminPage from "./pages/AdminPage/AdminPage.jsx";
 import WithDrawal from "./pages/WithDrawal/WithDrawal.js";
 import ChangePwd from "./pages/ChangePwd/ChangePwd.js";
@@ -29,6 +30,7 @@ function App() {
     console.log("새 토큰: " + newToken);
     setToken(newToken);
   };
+
   return (
     <BrowserRouter>
       <Header currentToken={token} />

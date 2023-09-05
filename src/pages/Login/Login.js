@@ -53,7 +53,6 @@ const Login = ({ tokenChanged }) => {
       tokenChanged(token);
       const decodedToken = jwt_decode(token);
       console.log(decodedToken.roles);
-
       if (decodedToken.roles) {
         // 백엔드에서 받은 역할(role) 확인
         if (decodedToken.roles === "ADMIN") {

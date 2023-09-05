@@ -40,6 +40,7 @@ const Signup = () => {
         userNickname: nickname,
         petTypeIds: withAnimals,
       });
+
       console.log("성공!");
       alert("회원가입이 되었습니다!");
       // 회원가입 성공 후 로그인 페이지로 이동

@@ -22,6 +22,7 @@ const ProfileEdit = () => {
 
   //닉네임 길이 2~10 제한두는 코드
   const handleNicknameChange = (e) => {
+<<<<<<< HEAD
     const newNickname = e.target.value;
     setNickname(newNickname);
     if (newNickname.length >= 2 && newNickname.length <= 10) {
@@ -31,6 +32,17 @@ const ProfileEdit = () => {
     } else if (newNickname.length >= 11) {
       setNicknameError("닉네임이 너무 깁니다.");
     }
+=======
+      const newNickname = e.target.value;
+      setNickname(newNickname);
+      if (newNickname.length >= 2 && newNickname.length <= 10) {
+        setNicknameError("");
+      } else if (newNickname.length === 1) {
+        setNicknameError("닉네임이 너무 짧습니다.");
+      } else if (newNickname.length >= 11) {
+        setNicknameError("닉네임이 너무 깁니다.");
+      }
+>>>>>>> upstream/lee
   };
 
   const handleGenderChange = (e) => {
@@ -67,7 +79,11 @@ const ProfileEdit = () => {
 
   const handleProfileUpdate = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     const userToken = localStorage.getItem("login-token");
+=======
+    const userToken = localStorage.getItem('login-token');
+>>>>>>> upstream/lee
     const decodedToken = jwt_decode(userToken);
     const userNum = decodedToken.userNum;
     console.log(userNum);
@@ -87,15 +103,23 @@ const ProfileEdit = () => {
       .post("/user/updateuser", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
+<<<<<<< HEAD
         },
       })
+=======
+      }})
+>>>>>>> upstream/lee
       .then((response) => {
         console.log("프로필 정보 업데이트 성공:", response.data);
 
         // 새로운 토큰을 받아와서 상태로 설정
         const newToken = response.data;
         setNewToken(newToken);
+<<<<<<< HEAD
         localStorage.setItem("login-token", newToken);
+=======
+        localStorage.setItem('login-token', newToken);
+>>>>>>> upstream/lee
         console.log(response.data);
         // 성공 시 메시지 표시 및 마이페이지로 이동
         alert("프로필 정보가 업데이트되었습니다.");
@@ -107,12 +131,20 @@ const ProfileEdit = () => {
         console.error("프로필 정보 업데이트 실패:", error);
         // 실패 시 오류 메시지 표시
         alert("프로필 정보 수정에 실패했습니다.");
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/lee
       });
   };
 
   // 컴포넌트가 마운트될 때 사용자의 이메일을 로컬 스토리지에서 불러오기
   useEffect(() => {
+<<<<<<< HEAD
     const newToken = localStorage.getItem("login-token");
+=======
+    const newToken = localStorage.getItem('login-token');
+>>>>>>> upstream/lee
     if (newToken) {
       // 토큰 해석
       const decodedToken = jwt_decode(newToken); // jwt 모듈을 사용하여 토큰 해석

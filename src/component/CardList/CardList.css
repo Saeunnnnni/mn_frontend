@@ -5,8 +5,7 @@
 
 .card-list{
     display: flex;
-    justify-content: space-between;   
-     margin-bottom: 120px;
+    justify-content: space-between;
 }
 .card{
     margin-right: 20px;
@@ -43,7 +42,6 @@
 
 .board-card-list .card{
     margin-right: 0 ;
-    margin-bottom: 25px;
 }
 
 .board-card-list .card-img{

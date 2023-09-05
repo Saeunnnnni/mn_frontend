@@ -18,15 +18,15 @@ const RecipeCardList = () => {
     }, [])
    
     return (
-        <div className='main-card-list container'>
+        <div className='recipe-card-list container'>
         <div className="card-list">
             {Array.isArray(cards) && cards.slice(0,4).map((card, index) => (
                 <Card key={index} card={card} />
             ))}
                 </div>
-                </div>
+               
            
-       
+        </div>
     );
 };
 

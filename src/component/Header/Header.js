@@ -2,26 +2,44 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
+<<<<<<< HEAD
 function Header({ currentToken, tokenChanged }) {
+=======
+function Header({currentToken}) {
+>>>>>>> upstream/lee
   // public 폴더까지의 상대 경로 계산: 빌드 환경에 따라 사용하는 것이 좋습니다.
   const publicPath = process.env.PUBLIC_URL;
   const [keyword, setKeyword] = useState("");
   const location = useLocation();
 
   useEffect(() => {
+<<<<<<< HEAD
     console.log("토큰 확인중");
     if (currentToken) {
       console.log("토큰o: " + currentToken);
     } else {
       localStorage.removeItem("login-token");
       console.log("토큰x: " + currentToken);
+=======
+    console.log("토큰 확인중")
+    if (currentToken) {
+      console.log("토큰o: " + currentToken)
+    } else {
+      localStorage.removeItem('login-token');
+      console.log("토큰x: " + currentToken)
+>>>>>>> upstream/lee
     }
   }, [currentToken]);
 
   const logout = () => {
+<<<<<<< HEAD
     localStorage.removeItem("login-token");
     tokenChanged(null);
     alert("로그아웃되었습니다.");
+=======
+    localStorage.removeItem('login-token');
+    alert('로그아웃되었습니다.');
+>>>>>>> upstream/lee
   };
 
   const loginLink = (
@@ -30,12 +48,19 @@ function Header({ currentToken, tokenChanged }) {
         <Link to="/myPage">마이페이지</Link>
       </li>
       <li>
+<<<<<<< HEAD
         <Link to="/" onClick={logout}>
           로그아웃
         </Link>
       </li>
     </ul>
   );
+=======
+        <Link to="/" onClick={logout}>로그아웃</Link>
+      </li>
+    </ul>
+  )
+>>>>>>> upstream/lee
 
   const logoutLink = (
     <ul>
@@ -46,7 +71,11 @@ function Header({ currentToken, tokenChanged }) {
         <Link to="/signup">회원가입</Link>
       </li>
     </ul>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> upstream/lee
 
   const searchInputChange = (e) => {
     setKeyword(e.target.value);
@@ -69,7 +98,11 @@ function Header({ currentToken, tokenChanged }) {
           <nav className="main-nav">
             <ul>
               <li>
+<<<<<<< HEAD
                 <Link
+=======
+              <Link
+>>>>>>> upstream/lee
                   className={`navbar ${
                     location.pathname === "/" ? "active" : ""
                   }`}
@@ -113,7 +146,13 @@ function Header({ currentToken, tokenChanged }) {
         </div>
 
         <div className="header-right">
+<<<<<<< HEAD
           <nav className="sub-nav">{currentToken ? loginLink : logoutLink}</nav>
+=======
+          <nav className="sub-nav">
+            {currentToken ? loginLink : logoutLink}
+          </nav>
+>>>>>>> upstream/lee
           <form onSubmit={searchSubmit}>
             <div className="search">
               <input
