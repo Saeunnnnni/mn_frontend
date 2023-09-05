@@ -21,6 +21,9 @@ const Signup = () => {
     promotion: false,
   });
 
+  // 정규식을 이용한 이메일 유효성 검사
+  const isEmailValidRegex = /^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
   // DB로 회원가입 정보 보내기
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -38,6 +41,7 @@ const Signup = () => {
         petTypeIds: withAnimals,
       });
       console.log("성공!");
+      alert("회원가입이 되었습니다!");
       // 회원가입 성공 후 로그인 페이지로 이동
       navigate("/login");
     } catch (error) {
@@ -49,6 +53,12 @@ const Signup = () => {
   // DB로 이메일 정보 보내기
   const handleEmailCheck = async (e) => {
     e.preventDefault();
+
+    if (!isEmailValidRegex.test(email)) {
+      alert("올바른 이메일 형식이 아닙니다.");
+      return;
+    }
+
     try {
       // 이메일 일치 여부 확인 (axios를 사용하여 백엔드 API 호출)
       const response = await axios.get("/auth/check-email", {
