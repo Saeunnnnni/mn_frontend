@@ -5,6 +5,7 @@ import Pagination from "../../lib/Pagination";
 import { useState, useEffect, useRef, useCallback } from "react";
 import axios from "axios";
 import Slider from "react-slick";
+//import DetailMqtt from '../../component/Mqtt/';
 
 //import { useParams } from 'react-router-dom';   //id값을 전달하기 위한 params
 //const { id } = useParams(); // URL 파라미터에서 id 추출
@@ -131,6 +132,18 @@ export default function Page() {
             <div className="recipe_detail_step_item">
                 <p>조리는 1번 사진부터 5번 사진 순서대로 진행됩니다.</p>
                 <DetailSlider />
+                <div className="recipe_detail_step_item_mqtt">
+                  현재 온도: <button onClick={()=>{
+                    axios.get('http://localhost:9995/temperature/publish')
+                    .then(res=>{
+                      setList(res.data);
+                    })
+                    .catch(error=>{
+                      console.log(error);
+                    });
+                    // <DetailMqtt />
+                  }}>mqtt 스타트</button>
+                </div>
             </div>
             {/* 해당 detail 페이지가 받은 좋아요, 댓글, 조회수 표시 */}
             <div className="recipe_detail_insight">
@@ -189,6 +202,12 @@ export default function Page() {
             {/* 등록된 댓글 나열 */}
             {currentReply.map((item, index) => (
               <ReplyItem key={index} {...item} />
+            ))}
+
+            {list.subImgs.map((item, index)=>(
+              <div key={index}>
+                <img src={item.sub_path} />
+              </div>
             ))}
 
             <Pagination pageCount={Math.ceil(reply.length / replyPerPage)} onPageChange={handlePageChange} />

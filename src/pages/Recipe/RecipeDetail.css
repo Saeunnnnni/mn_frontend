@@ -109,7 +109,15 @@
   height: auto;
 }
 
-.recipe_detail_step_item > .ingre_container {
+.recipe_detail_step_item_mqtt {
+  float: right;
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+  line-height: 30px;
+}
+
+/* .recipe_detail_step_item > .ingre_container {
   margin-top: 10px;
 }
 
@@ -125,7 +133,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
+} */
 
 .recipe_detail_insight {
   margin-top: 40px;
