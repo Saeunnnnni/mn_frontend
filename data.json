@@ -6,12 +6,7 @@
       "level": "초급",
       "time": "20분",
       "writer": "petlover123",
-      "ingredients": [
-        "닭가슴살",
-        "당근",
-        "브로콜리",
-        "양상추"
-      ],
+      "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
       "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe01.jpg",
       "likes": 50,
@@ -23,11 +18,7 @@
       "level": "초급",
       "time": "15분",
       "writer": "doggytreats",
-      "ingredients": [
-        "사과",
-        "오트밀",
-        "요거트"
-      ],
+      "ingredients": ["사과", "오트밀", "요거트"],
       "description": "맛있고 건강한 사과 시리얼 스낵 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe02.jpg",
       "likes": 20,
@@ -39,12 +30,7 @@
       "level": "중급",
       "time": "30분",
       "writer": "pawsandbites",
-      "ingredients": [
-        "고구마",
-        "계란",
-        "현미 가루",
-        "오메가 3 보충제"
-      ],
+      "ingredients": ["고구마", "계란", "현미 가루", "오메가 3 보충제"],
       "description": "고구마를 활용한 건강한 간식인 고구마 쿠키 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe03.jpg",
       "likes": 30,
@@ -56,12 +42,7 @@
       "level": "중급",
       "time": "40분",
       "writer": "petfoodie",
-      "ingredients": [
-        "양고기",
-        "감자",
-        "당근",
-        "녹차"
-      ],
+      "ingredients": ["양고기", "감자", "당근", "녹차"],
       "description": "풍미 넘치는 양고기 스튜 레시피로 반려견을 맛있게 먹여주세요.",
       "main_image_url": "http://localhost:3000/images/recipe04.jpg",
       "likes": 0,
@@ -73,12 +54,7 @@
       "level": "고급",
       "time": "25분",
       "writer": "healthydog",
-      "ingredients": [
-        "연어",
-        "감자 가루",
-        "달걀",
-        "오메가 3 보충제"
-      ],
+      "ingredients": ["연어", "감자 가루", "달걀", "오메가 3 보충제"],
       "description": "고급 간식 연어 스틱 레시피로 건강한 영양소를 공급해보세요.",
       "main_image_url": "http://localhost:3000/images/recipe05.jpg",
       "likes": 0,
@@ -90,12 +66,7 @@
       "level": "중급",
       "time": "30분",
       "writer": "fitcook",
-      "ingredients": [
-        "닭가슴살",
-        "양파",
-        "마늘",
-        "간장"
-      ],
+      "ingredients": ["닭가슴살", "양파", "마늘", "간장"],
       "description": "건강한 닭가슴살 구이 레시피로 단백질 공급!",
       "main_image_url": "http://localhost:3000/images/recipe06.jpg",
       "likes": 0,
@@ -107,12 +78,7 @@
       "level": "초급",
       "time": "15분",
       "writer": "veganlover",
-      "ingredients": [
-        "시금치",
-        "고구마",
-        "찹쌀 가루",
-        "소금"
-      ],
+      "ingredients": ["시금치", "고구마", "찹쌀 가루", "소금"],
       "description": "비건 레시피로 만드는 시금치 고구마 볼!",
       "main_image_url": "http://localhost:3000/images/recipe07.jpg",
       "likes": 0,
@@ -124,12 +90,7 @@
       "level": "초급",
       "time": "10분",
       "writer": "healthylife",
-      "ingredients": [
-        "바나나",
-        "요거트",
-        "우유",
-        "꿀"
-      ],
+      "ingredients": ["바나나", "요거트", "우유", "꿀"],
       "description": "간단하게 만드는 바나나 스무디 레시피!",
       "main_image_url": "http://localhost:3000/images/recipe08.jpg",
       "likes": 0,
@@ -141,12 +102,7 @@
       "level": "중급",
       "time": "20분",
       "writer": "healthydog",
-      "ingredients": [
-        "사과",
-        "치즈",
-        "코코넛 가루",
-        "계피"
-      ],
+      "ingredients": ["사과", "치즈", "코코넛 가루", "계피"],
       "description": "과일과 치즈가 어우러진 맛있는 간식 사과 치즈 볼!",
       "main_image_url": "http://localhost:3000/images/recipe09.jpg",
       "likes": 0,
@@ -158,12 +114,7 @@
       "level": "초급",
       "time": "15분",
       "writer": "fitcook",
-      "ingredients": [
-        "양파",
-        "밀가루",
-        "우유",
-        "파우더"
-      ],
+      "ingredients": ["양파", "밀가루", "우유", "파우더"],
       "description": "간단하게 만드는 양파링 레시피!",
       "main_image_url": "http://localhost:3000/images/recipe10.jpg",
       "likes": 0,
@@ -175,12 +126,7 @@
       "level": "초급",
       "time": "20분",
       "writer": "petlover123",
-      "ingredients": [
-        "닭가슴살",
-        "당근",
-        "브로콜리",
-        "양상추"
-      ],
+      "ingredients": ["닭가슴살", "당근", "브로콜리", "양상추"],
       "description": "간단하게 만들 수 있는 닭가슴살 샐러드 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe01.jpg",
       "likes": 50,
@@ -192,12 +138,7 @@
       "level": "중급",
       "time": "35분",
       "writer": "foodlover",
-      "ingredients": [
-        "닭가슴살",
-        "감자",
-        "양파",
-        "로즈마리"
-      ],
+      "ingredients": ["닭가슴살", "감자", "양파", "로즈마리"],
       "description": "오븐에서 굽는 맛있는 닭가슴살 베이크 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe11.jpg",
       "likes": 11,
@@ -209,12 +150,7 @@
       "level": "초급",
       "time": "25분",
       "writer": "quickcook",
-      "ingredients": [
-        "닭가슴살",
-        "빵가루",
-        "밀가루",
-        "달걀"
-      ],
+      "ingredients": ["닭가슴살", "빵가루", "밀가루", "달걀"],
       "description": "간편하게 만드는 치킨 너겟 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe03.jpg",
       "likes": 5,
@@ -226,12 +162,7 @@
       "level": "초급",
       "time": "30분",
       "writer": "oatmeallover",
-      "ingredients": [
-        "오트밀",
-        "바나나",
-        "요거트",
-        "계란"
-      ],
+      "ingredients": ["오트밀", "바나나", "요거트", "계란"],
       "description": "간편하게 만드는 오트밀 머핀 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe05.jpg",
       "likes": 15,
@@ -243,12 +174,7 @@
       "level": "초급",
       "time": "10분",
       "writer": "healthysmoothie",
-      "ingredients": [
-        "사과",
-        "바나나",
-        "요거트",
-        "우유"
-      ],
+      "ingredients": ["사과", "바나나", "요거트", "우유"],
       "description": "간단하게 만드는 사과 바나나 요거트 스무디 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe02.jpg",
       "likes": 8,
@@ -260,11 +186,7 @@
       "level": "초급",
       "time": "15분",
       "writer": "doggytreats",
-      "ingredients": [
-        "사과",
-        "오트밀",
-        "요거트"
-      ],
+      "ingredients": ["사과", "오트밀", "요거트"],
       "description": "맛있고 건강한 사과 시리얼 스낵 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe02.jpg",
       "likes": 20,
@@ -276,12 +198,7 @@
       "level": "중급",
       "time": "30분",
       "writer": "pawsandbites",
-      "ingredients": [
-        "고구마",
-        "계란",
-        "현미 가루",
-        "오메가 3 보충제"
-      ],
+      "ingredients": ["고구마", "계란", "현미 가루", "오메가 3 보충제"],
       "description": "고구마를 활용한 건강한 간식인 고구마 쿠키 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe03.jpg",
       "likes": 30,
@@ -293,12 +210,7 @@
       "level": "중급",
       "time": "40분",
       "writer": "petfoodie",
-      "ingredients": [
-        "양고기",
-        "감자",
-        "당근",
-        "녹차"
-      ],
+      "ingredients": ["양고기", "감자", "당근", "녹차"],
       "description": "풍미 넘치는 양고기 스튜 레시피로 반려견을 맛있게 먹여주세요.",
       "main_image_url": "http://localhost:3000/images/recipe04.jpg",
       "likes": 0,
@@ -310,12 +222,7 @@
       "level": "고급",
       "time": "25분",
       "writer": "healthydog",
-      "ingredients": [
-        "연어",
-        "감자 가루",
-        "달걀",
-        "오메가 3 보충제"
-      ],
+      "ingredients": ["연어", "감자 가루", "달걀", "오메가 3 보충제"],
       "description": "고급 간식 연어 스틱 레시피로 건강한 영양소를 공급해보세요.",
       "main_image_url": "http://localhost:3000/images/recipe05.jpg",
       "likes": 0,
@@ -327,12 +234,7 @@
       "level": "중급",
       "time": "30분",
       "writer": "fitcook",
-      "ingredients": [
-        "닭가슴살",
-        "양파",
-        "마늘",
-        "간장"
-      ],
+      "ingredients": ["닭가슴살", "양파", "마늘", "간장"],
       "description": "건강한 닭가슴살 구이 레시피로 단백질 공급!",
       "main_image_url": "http://localhost:3000/images/recipe06.jpg",
       "likes": 0,
@@ -344,12 +246,7 @@
       "level": "초급",
       "time": "15분",
       "writer": "veganlover",
-      "ingredients": [
-        "시금치",
-        "고구마",
-        "찹쌀 가루",
-        "소금"
-      ],
+      "ingredients": ["시금치", "고구마", "찹쌀 가루", "소금"],
       "description": "비건 레시피로 만드는 시금치 고구마 볼!",
       "main_image_url": "http://localhost:3000/images/recipe07.jpg",
       "likes": 0,
@@ -361,12 +258,7 @@
       "level": "초급",
       "time": "10분",
       "writer": "healthylife",
-      "ingredients": [
-        "바나나",
-        "요거트",
-        "우유",
-        "꿀"
-      ],
+      "ingredients": ["바나나", "요거트", "우유", "꿀"],
       "description": "간단하게 만드는 바나나 스무디 레시피!",
       "main_image_url": "http://localhost:3000/images/recipe08.jpg",
       "likes": 0,
@@ -378,12 +270,7 @@
       "level": "중급",
       "time": "20분",
       "writer": "healthydog",
-      "ingredients": [
-        "사과",
-        "치즈",
-        "코코넛 가루",
-        "계피"
-      ],
+      "ingredients": ["사과", "치즈", "코코넛 가루", "계피"],
       "description": "과일과 치즈가 어우러진 맛있는 간식 사과 치즈 볼!",
       "main_image_url": "http://localhost:3000/images/recipe09.jpg",
       "likes": 0,
@@ -395,12 +282,7 @@
       "level": "초급",
       "time": "15분",
       "writer": "fitcook",
-      "ingredients": [
-        "양파",
-        "밀가루",
-        "우유",
-        "파우더"
-      ],
+      "ingredients": ["양파", "밀가루", "우유", "파우더"],
       "description": "간단하게 만드는 양파링 레시피!",
       "main_image_url": "http://localhost:3000/images/recipe10.jpg",
       "likes": 0,
@@ -412,12 +294,7 @@
       "level": "중급",
       "time": "35분",
       "writer": "foodlover",
-      "ingredients": [
-        "닭가슴살",
-        "감자",
-        "양파",
-        "로즈마리"
-      ],
+      "ingredients": ["닭가슴살", "감자", "양파", "로즈마리"],
       "description": "오븐에서 굽는 맛있는 닭가슴살 베이크 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe11.jpg",
       "likes": 11,
@@ -429,12 +306,7 @@
       "level": "초급",
       "time": "25분",
       "writer": "quickcook",
-      "ingredients": [
-        "닭가슴살",
-        "빵가루",
-        "밀가루",
-        "달걀"
-      ],
+      "ingredients": ["닭가슴살", "빵가루", "밀가루", "달걀"],
       "description": "간편하게 만드는 치킨 너겟 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe03.jpg",
       "likes": 5,
@@ -446,12 +318,7 @@
       "level": "초급",
       "time": "30분",
       "writer": "oatmeallover",
-      "ingredients": [
-        "오트밀",
-        "바나나",
-        "요거트",
-        "계란"
-      ],
+      "ingredients": ["오트밀", "바나나", "요거트", "계란"],
       "description": "간편하게 만드는 오트밀 머핀 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe05.jpg",
       "likes": 15,
@@ -463,12 +330,7 @@
       "level": "초급",
       "time": "10분",
       "writer": "healthysmoothie",
-      "ingredients": [
-        "사과",
-        "바나나",
-        "요거트",
-        "우유"
-      ],
+      "ingredients": ["사과", "바나나", "요거트", "우유"],
       "description": "간단하게 만드는 사과 바나나 요거트 스무디 레시피입니다.",
       "main_image_url": "http://localhost:3000/images/recipe02.jpg",
       "likes": 8,
@@ -556,6 +418,34 @@
       }
     ]
   },
+  "recipedetail": [
+    {
+      "rcpNum": 1,
+      "imageFile": "https://recipe1.ezmember.co.kr/cache/recipe/2019/08/21/f51404dc513ccc76be4b5668f5dd350b1.jpg",
+      "title": "쉽고 빠르게, 더운 여름에 만들어 먹기 좋은 강아지용 냉면",
+      "content": "나만 먹기 눈치 보일 때 ! 강아지도 같이 호로록 시원하게 먹고 싶을 때!\n콩물로 쉽고 건강하게 먹을 수 있는 반려견용 멍냉면을 만들어 볼까요 !  10분이면 요리 끝 !",
+      "servingSize": 1,
+      "cookingTime": 10,
+      "cookingLevel": "난이도 중",
+      "ingre": "콩국물 500ml, 소면 동전크기만큼, 오이 반절, 고명 간식 조금",
+      "step": [
+        {
+          "desc": "조리는 1번 사진부터 5번 사진 순서대로 진행됩니다.",
+          "img": "https://recipe1.ezmember.co.kr/cache/recipe/2023/08/09/a393d884c9710311dca36a5e0a9bc1dc1.jpg",
+          "ingre": "https://recipe1.ezmember.co.kr/cache/recipe/2016/06/14/60d56df3fea1b0502da32e68c2d8f5ee1.jpg"
+        }
+      ],
+      "insight": {
+        "like": 150,
+        "reply": 5,
+        "viewCount": 12500
+      },
+      "user": {
+        "thumb": "https://randomuser.me/api/portraits/med/men/52.jpg",
+        "writer": "블루베리"
+      }
+    }
+  ],
   "partyList": [
     {
       "title": "뽀삐의 생일파티🐶🎉",
@@ -643,34 +533,6 @@
       "content": "이것은 다섯 번째 게시물의 내용입니다.",
       "writer": "user2",
       "createdDate": "2023-06-03"
-    }
-  ],
-  "recipedetail": [
-    {
-      "rcpNum": 1,
-      "imageFile": "https://recipe1.ezmember.co.kr/cache/recipe/2019/08/21/f51404dc513ccc76be4b5668f5dd350b1.jpg",
-      "title": "쉽고 빠르게, 더운 여름에 만들어 먹기 좋은 강아지용 냉면",
-      "content": "나만 먹기 눈치 보일 때 ! 강아지도 같이 호로록 시원하게 먹고 싶을 때!\n콩물로 쉽고 건강하게 먹을 수 있는 반려견용 멍냉면을 만들어 볼까요 !  10분이면 요리 끝 !",
-      "servingSize": 1,
-      "cookingTime": 10,
-      "cookingLevel": "난이도 중",
-      "ingre": "콩국물 500ml, 소면 동전크기만큼, 오이 반절, 고명 간식 조금",
-      "step": [
-        {
-          "desc": "조리는 1번 사진부터 5번 사진 순서대로 진행됩니다.",
-          "img": "https://recipe1.ezmember.co.kr/cache/recipe/2023/08/09/a393d884c9710311dca36a5e0a9bc1dc1.jpg",
-          "ingre": "https://recipe1.ezmember.co.kr/cache/recipe/2016/06/14/60d56df3fea1b0502da32e68c2d8f5ee1.jpg"
-        }
-      ],
-      "insight": {
-        "like": 150,
-        "reply": 5,
-        "viewCount": 12500
-      },
-      "user": {
-        "thumb": "https://randomuser.me/api/portraits/med/men/52.jpg",
-        "writer": "블루베리"
-      }
     }
   ],
   "reply": [
@@ -771,27 +633,6 @@
       "content": "zxcszxc",
       "createdAt": "2023.08.24",
       "id": 14
-    },
-    {
-      "thumb": "https://randomuser.me/api/portraits/med/men/49.jpg",
-      "name": "abcde",
-      "content": "djadja",
-      "createdAt": "2023.08.24",
-      "id": 15
-    },
-    {
-      "thumb": "https://randomuser.me/api/portraits/med/men/49.jpg",
-      "name": "abcde",
-      "content": "sad",
-      "createdAt": "2023.08.24",
-      "id": 16
-    },
-    {
-      "thumb": "https://randomuser.me/api/portraits/med/men/49.jpg",
-      "name": "abcde",
-      "content": "fdf",
-      "createdAt": "2023.08.24",
-      "id": 17
     }
   ]
 }

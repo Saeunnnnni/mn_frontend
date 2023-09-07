@@ -4,7 +4,6 @@ import "./index.css";
 import "./mobile.css";
 import App from "./App";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<App />);
