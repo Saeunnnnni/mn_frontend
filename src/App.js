@@ -29,10 +29,9 @@ function App() {
     console.log("새 토큰: " + newToken);
     setToken(newToken);
   };
-
   return (
     <BrowserRouter>
-      <Header currentToken={token} tokenChanged={handleTokenChanged} />
+      <Header currentToken={token} />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/noticeBoard" element={<NoticeBoard />}/>
@@ -46,7 +45,7 @@ function App() {
         <Route path="/partyWrite" element={<PartyWrite />}/>
         <Route path="/login" element={<Login tokenChanged={handleTokenChanged} />}/>
         <Route path="/signup" element={<Signup />} />
-        <Route path="/MyPage" element={<MyPage />} />
+        <Route path="/myPage" element={<MyPage />} />
         <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/withDrawal" element={<WithDrawal />} />
