@@ -23,6 +23,7 @@ const RecipeCardList = () => {
         axios.get('http://localhost:9999/recipe/list')
         .then(response => {
             setCards(response.data);
+            console.log(response.data)
             setTotalRecipeCount(response.data.length); // 레시피 개수 설정
         })
         .catch(error => {
@@ -46,7 +47,7 @@ const RecipeCardList = () => {
         setCurrentPage(selectedPage);
     };
 
-    
+
         
     return (
         <div className='board-card-list container'>
