@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./MyPageCardList.css";
+import "./MyContentCardList.css";
 import jwt_decode from "jwt-decode";
 import MyPageCard from "./MyPageCard";
 import axios from "axios";
@@ -36,7 +36,6 @@ const MyContentCardList = () => {
       }
     }
   }, [currentPage]);
-  w;
 
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
