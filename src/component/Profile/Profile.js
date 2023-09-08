@@ -24,27 +24,36 @@ const Profile = () => {
             const userEmail = decodedToken.userEmail; // 이메일 추출
 
             // 프로필 데이터 가져오기
-            const profileResponse = await axios.get(`/user/profile/${userEmail}`);
+            const profileResponse = await axios.get(
+              `/user/profile/${userEmail}`
+            );
             const userData = profileResponse.data;
             const userProfile = userData.userProfile; // 프로필 이미지 파일 이름으로 수정
             console.log(userData);
 
             // 팔로워 수 가져오기
-            const followersResponse = await axios.get(`/follow/followers/count/${userEmail}`);
+            const followersResponse = await axios.get(
+              `/follow/followers/count/${userEmail}`
+            );
             const followerCount = followersResponse.data;
 
             // 팔로잉 수 가져오기
-            const followingResponse = await axios.get(`/follow/followings/count/${userEmail}`);
+            const followingResponse = await axios.get(
+              `/follow/followings/count/${userEmail}`
+            );
             const followingCount = followingResponse.data;
 
             // 프로필 이미지 가져오기
-            const profileImageResponse = await axios.get(`/user/image/${userProfile}`, {
-              responseType: 'arraybuffer', // 이미지 데이터로 받음
-            });
+            const profileImageResponse = await axios.get(
+              `/user/image/${userProfile}`,
+              {
+                responseType: "arraybuffer", // 이미지 데이터로 받음
+              }
+            );
             const profileImage = `data:image/jpeg;base64,${btoa(
               new Uint8Array(profileImageResponse.data).reduce(
                 (data, byte) => data + String.fromCharCode(byte),
-                ''
+                ""
               )
             )}`;
 
