@@ -66,7 +66,9 @@ export default function Page() {
     const rcpNum = queryParams.rcpNum;
 
     const getList = ()=>{
-      axios.get("http://localhost:9999/recipe/detail?rcpNum="+rcpNum)
+      axios.get("/recipe/detail", {
+        params: {rcpNum: rcpNum}
+      })
       .then(res=>{
         setList(res.data);
       })
@@ -214,12 +216,12 @@ export default function Page() {
             <div className="title">댓글 {totalReplyCount}</div>
             {/* 댓글 입력 창 */}
             <div className="input">
-              <div>
+              {/* <div>
                 <img
                   src={"list.userProfile"}
                   alt="user thumb"
                 />
-              </div>
+              </div> */}
               {/* 댓글 입력 시 댓글 목록에 추가되도록 기능 구현 */}
               <input ref={inputReply} type="text" />
               <button onClick={(e)=>{
@@ -302,11 +304,11 @@ function Following(){
 
 // 요리 난이도에 따른 이미지 변경
 function CookingLevel({level}){
-    if(level == '난이도 상'){
+    if(level == 'hard'){
         return <img width='110' height='46' src="/images/level3.png" alt="level3 logo"></img>;
-    } else if(level == '난이도 중'){
+    } else if(level == 'normal'){
         return <img width='90' height='46' src="/images/level2.png" alt="level2 logo"></img>;
-    } else if(level == '난이도 하'){
+    } else if(level == 'easy'){
         return <img width='46' height='46' src="/images/level1.png" alt="level1 logo"></img>;
     } else{
         return null;

@@ -46,11 +46,6 @@ const BoardRecipeCardList = () => {
         console.log("Selected page:", selectedPage); // 현재 페이지 로깅
         setCurrentPage(selectedPage);
     };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> upstream/lee
         
     return (
         <div className='board-card-list container'>

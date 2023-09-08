@@ -77,11 +77,7 @@ const Card = ({ card, showTitle, showLikeBox }) => {
     return (
         <div className="card">
             <Link to={`/RecipeDetail?rcpNum=${card.rcpNum}`}>
-<<<<<<< HEAD
-                <img className="card-img" src={card.mainPath} alt={card.title} />
-=======
                 <img className="card-img" src={imageData}  alt={card.title} />
->>>>>>> upstream/lee
             </Link>
 
             <div className='card-box'>
