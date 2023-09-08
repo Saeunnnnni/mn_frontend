@@ -7,13 +7,6 @@ import SlickSlider from '../../lib/slickSlide';
 import { Arrow } from '../../lib/arrow'; 
 import BoardRecipeCardList from '../../component/CardList/BoardRecipeCardList';
 
-
-
-
-
-
-
-
 const RecipeBoard = () => {
      /* 사용자들의 data가 담겨있는 url 변수에 넣기! */
      const usersCategoriesUrl = "http://localhost:9999/user/list";
@@ -21,13 +14,13 @@ const RecipeBoard = () => {
      const [UsersCategories, setUsersCategories] = useState([]);
 
     /*각각 카테고리목록을 axios로 불러오기 */
-     useEffect(() => { 
+     useEffect(() => {
     axios.get(usersCategoriesUrl)
         .then((Response) => {
             setUsersCategories(Response.data)
             //console.log(Response.data)
-        })   
-        .catch((error) => {        
+        })
+        .catch((error) => {
           console.error('Error fetching data:', error);
         });
     }, [])
@@ -51,25 +44,25 @@ const RecipeBoard = () => {
       prevArrow: <Arrow />
     };
       //console.log(recipes)
-      
-      
-    return ( 
-      
+
+
+    return (
+
       <div className='container'>
             {/* 메인 이미지 :  가장 좋아요가 많은 이미지가 출력된다. */}
           <div className='RecipeBoard-mainImg'>
-          
+
               <MainImg/>
             </div>
 
             {/* 이미지 카테고리 */}
             <p style={titleStyle}>카테고리</p>
                 <ImageCategory categories={ImagesCategories} />
-                          
-                
-              
+
+
+
               {/* 쉐프리스트 카테고리 : card list  + slider 적용 */}
-              <p  style={titleStyle }>쉐프 소개</p> 
+              <p  style={titleStyle }>쉐프 소개</p>
                 {/* chef list  + slider 적용 */}
                 <SlickSlider items={UsersCategories.map((UserCategory, index) => (
                   <ImageCategory key={index} categories={[UserCategory]} />
@@ -87,10 +80,7 @@ const RecipeBoard = () => {
       );
   };
 
-
   //스타일 변수
-
-
   const titleStyle = {
     fontSize:'20px',
     margin:'0 0 27px 0',
