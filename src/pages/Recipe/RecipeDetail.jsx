@@ -41,10 +41,31 @@ export default function Page() {
     // 추가
 
     //토큰값 받아오기
-    const userToken = localStorage.getItem('login-token');
-    const decodedToken = jwt_decode(userToken);
-    const userNum = decodedToken.userNum;
-    const userEmail = decodedToken.userEmail;
+    //const userToken = localStorage.getItem('login-token');
+    let decodedToken = null;
+    let userNum = null;
+    let userEmail = null;
+    useEffect(() => {
+      const userToken = localStorage.getItem('login-token');
+      if (userToken) {
+        // 토큰 해석
+        decodedToken = jwt_decode(userToken); // jwt 모듈을 사용하여 토큰 해석
+        if (decodedToken && decodedToken.userNum) {
+          // 해석한 토큰에 이메일 정보가 있는지 확인하고, 있다면 이메일 값과 생일, 닉네임을 가져와서 설정
+          userNum = decodedToken.userNum;
+          userEmail = decodedToken.userEmail;
+        } else {
+          console.error("userNum 없음");
+        }
+      } else {
+        
+      }
+    }, []);
+
+    // const decodedToken = jwt_decode(userToken);
+    // const userNum = decodedToken.userNum;
+    // const userEmail = decodedToken.userEmail;
+    
 
     // 현재 페이지의 URL을 가져옵니다.
     const currentURL = window.location.href;
@@ -66,9 +87,7 @@ export default function Page() {
     const rcpNum = queryParams.rcpNum;
 
     const getList = ()=>{
-      axios.get("/recipe/detail", {
-        params: {rcpNum: rcpNum}
-      })
+      axios.get("http://localhost:9999/recipe/detail?rcpNum="+rcpNum)
       .then(res=>{
         setList(res.data);
       })
@@ -183,7 +202,6 @@ export default function Page() {
                     .catch(error=>{
                       console.log(error);
                     });
-                    // <DetailMqtt />
                   }}>mqtt</button>
                 </div>
             </div>
@@ -216,16 +234,17 @@ export default function Page() {
             <div className="title">댓글 {totalReplyCount}</div>
             {/* 댓글 입력 창 */}
             <div className="input">
-              {/* <div>
+              <div>
                 <img
                   src={"list.userProfile"}
                   alt="user thumb"
                 />
-              </div> */}
+              </div>
               {/* 댓글 입력 시 댓글 목록에 추가되도록 기능 구현 */}
               <input ref={inputReply} type="text" />
               <button onClick={(e)=>{
                 const rplContent = inputReply.current.value;
+                inputReply.current.value = "";
                 axios.post("http://localhost:9999/recipe/reply/insert", {
                   userNum,
                   rcpNum,
