@@ -1,11 +1,11 @@
 import React, { useState, useEffect} from 'react';
 import './CardList.css';
-import RecipeCard from './RecipeCard';
+import Card from './Card';
 import axios from 'axios';
 import Pagination from '../../lib/Pagination.jsx';
 import { Link } from 'react-router-dom';
 
-const BoardRecipeCardList = () => {
+const RecipeCardList = () => {
     const [cards, setCards] = useState([]);
      //초기값을 빈 배열로 설정
     
@@ -20,18 +20,17 @@ const BoardRecipeCardList = () => {
     // 추가
 
     useEffect(() => { 
-        axios.get('/recipe/list')
+        axios.get('http://localhost:5000/recipe')
         .then(response => {
             setCards(response.data);
-            console.log(response.data)
             setTotalRecipeCount(response.data.length); // 레시피 개수 설정
         })
         .catch(error => {
-          // console.error('레시피 카드 리스트 Error fetching data:', error);
+           //console.error('Error fetching data:', error);
         });
-    }, [])
+    }, [currentCards])
    //axios로 json데이터 가져오기    
-
+ 
 
     //현재 페이지에 표시 되어야 할 카드의 시작 위치 계산 
     //현재 페이지 * 한페이지에 표시할 카드 수 =  시작위치
@@ -42,32 +41,25 @@ const BoardRecipeCardList = () => {
     const currentCards = cards.slice(offset, offset + cardsPerPage);
 
      //페이지 변경을 처리하며, 현재 페이지에 맞게 표시할 카드들을 슬라이스하여 렌더링하는 함수 
-     const handlePageChange = (selectedPage) => {
-        console.log("Selected page:", selectedPage); // 현재 페이지 로깅
-        setCurrentPage(selectedPage);
+     const handlePageChange = ({ selected }) => {        
+        setCurrentPage(selected);
+        console.log(setCurrentPage)
     };
-
         
     return (
         <div className='board-card-list container'>
             <div className='board-list-top'>
                 <p className='list-total-count'>전체 {totalRecipeCount} 개 </p>
-                <Link to="/recipeWrite" className='write-go'>글쓰기</Link>
+                <Link className='write-go'>글쓰기</Link>
             </div>
             <div className="card-list">
                 {Array.isArray(currentCards) && currentCards.map((card, index) => (
-                    <RecipeCard key={index} card={card} showTitle={true} showLikeBox={true}/>
+                    <Card key={index} card={card} />
                 ))}
                 </div>
-                <Pagination pageCount={Math.ceil(cards.length / cardsPerPage)} onPageChange={(data) => handlePageChange(data.selected)} />
-
+            <Pagination pageCount={Math.ceil(cards.length / cardsPerPage)} onPageChange={handlePageChange} />
         </div>
     );
 };
 
-export default BoardRecipeCardList;
-
-
-
-
-
+export default RecipeCardList;

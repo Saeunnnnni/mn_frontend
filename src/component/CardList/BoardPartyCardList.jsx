@@ -47,9 +47,6 @@ const BoardPartyCardList = () => {
         setCurrentPage(selectedPage);
     };
 
-
-
-
     return (
         <div className='board-card-list container'>
             <div className='board-list-top'>

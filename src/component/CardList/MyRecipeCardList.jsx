@@ -85,5 +85,4 @@ const MyRecipeCardList = () => {
     );
 };
 
-
 export default MyRecipeCardList;
